@@ -12,6 +12,12 @@
 		D8C347EE239413DF00441AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C347ED239413DF00441AED /* Assets.xcassets */; };
 		D8C347F1239413DF00441AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C347EF239413DF00441AED /* LaunchScreen.storyboard */; };
 		D8C347FC239413DF00441AED /* Mars_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */; };
+		D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480B2394184500441AED /* AppCoordinator.swift */; };
+		D8C3480F239418E000441AED /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480E239418E000441AED /* Rover.swift */; };
+		D8C348152394190900441AED /* photos_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348122394190900441AED /* photos_sample.json */; };
+		D8C348162394190900441AED /* rovers_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348132394190900441AED /* rovers_sample.json */; };
+		D8C348172394190900441AED /* manifest_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348142394190900441AED /* manifest_sample.json */; };
+		D8C34819239419C000441AED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C34818239419C000441AED /* Camera.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,6 +43,12 @@
 		D8C34807239416F500441AED /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		D8C34808239416F500441AED /* license */ = {isa = PBXFileReference; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
 		D8C348092394175D00441AED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		D8C3480B2394184500441AED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D8C3480E239418E000441AED /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		D8C348122394190900441AED /* photos_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos_sample.json; path = api/photos_sample.json; sourceTree = SOURCE_ROOT; };
+		D8C348132394190900441AED /* rovers_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rovers_sample.json; path = api/rovers_sample.json; sourceTree = SOURCE_ROOT; };
+		D8C348142394190900441AED /* manifest_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest_sample.json; path = api/manifest_sample.json; sourceTree = SOURCE_ROOT; };
+		D8C34818239419C000441AED /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,8 @@
 			children = (
 				D8C347E4239413DE00441AED /* AppDelegate.swift */,
 				D8C347E6239413DE00441AED /* SceneDelegate.swift */,
+				D8C3480B2394184500441AED /* AppCoordinator.swift */,
+				D8C3480D239418CF00441AED /* Models */,
 				D8C3480A239417A100441AED /* Extras */,
 			);
 			path = Source;
@@ -90,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */,
+				D8C34811239418F900441AED /* Sample JSON */,
 				D8C347FD239413DF00441AED /* Info.plist */,
 			);
 			path = "Unit Tests";
@@ -113,6 +128,25 @@
 				D8C347F2239413DF00441AED /* Info.plist */,
 			);
 			path = Extras;
+			sourceTree = "<group>";
+		};
+		D8C3480D239418CF00441AED /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3480E239418E000441AED /* Rover.swift */,
+				D8C34818239419C000441AED /* Camera.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D8C34811239418F900441AED /* Sample JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D8C348142394190900441AED /* manifest_sample.json */,
+				D8C348122394190900441AED /* photos_sample.json */,
+				D8C348132394190900441AED /* rovers_sample.json */,
+			);
+			name = "Sample JSON";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +239,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C348162394190900441AED /* rovers_sample.json in Resources */,
+				D8C348172394190900441AED /* manifest_sample.json in Resources */,
+				D8C348152394190900441AED /* photos_sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C3480F239418E000441AED /* Rover.swift in Sources */,
+				D8C34819239419C000441AED /* Camera.swift in Sources */,
+				D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */,
 				D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */,
 				D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */,
 			);
