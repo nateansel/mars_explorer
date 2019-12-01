@@ -31,9 +31,12 @@
 		D8C347ED239413DF00441AED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C347F0239413DF00441AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C347F2239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8C347F7239413DF00441AED /* Mars ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8C347F7239413DF00441AED /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_ExplorerTests.swift; sourceTree = "<group>"; };
 		D8C347FD239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D8C34807239416F500441AED /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
+		D8C34808239416F500441AED /* license */ = {isa = PBXFileReference; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
+		D8C348092394175D00441AED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +63,7 @@
 				D8C347E3239413DE00441AED /* Source */,
 				D8C347FA239413DF00441AED /* Unit Tests */,
 				D8C347E2239413DE00441AED /* Products */,
+				D8C34806239416DA00441AED /* Supporting Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C347E1239413DE00441AED /* Mars Explorer.app */,
-				D8C347F7239413DF00441AED /* Mars ExplorerTests.xctest */,
+				D8C347F7239413DF00441AED /* Unit Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -77,9 +81,7 @@
 			children = (
 				D8C347E4239413DE00441AED /* AppDelegate.swift */,
 				D8C347E6239413DE00441AED /* SceneDelegate.swift */,
-				D8C347ED239413DF00441AED /* Assets.xcassets */,
-				D8C347EF239413DF00441AED /* LaunchScreen.storyboard */,
-				D8C347F2239413DF00441AED /* Info.plist */,
+				D8C3480A239417A100441AED /* Extras */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -91,6 +93,26 @@
 				D8C347FD239413DF00441AED /* Info.plist */,
 			);
 			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		D8C34806239416DA00441AED /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D8C34807239416F500441AED /* readme.md */,
+				D8C34808239416F500441AED /* license */,
+				D8C348092394175D00441AED /* .gitignore */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8C3480A239417A100441AED /* Extras */ = {
+			isa = PBXGroup;
+			children = (
+				D8C347ED239413DF00441AED /* Assets.xcassets */,
+				D8C347EF239413DF00441AED /* LaunchScreen.storyboard */,
+				D8C347F2239413DF00441AED /* Info.plist */,
+			);
+			path = Extras;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -113,9 +135,9 @@
 			productReference = D8C347E1239413DE00441AED /* Mars Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D8C347F6239413DF00441AED /* Mars ExplorerTests */ = {
+		D8C347F6239413DF00441AED /* Unit Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Mars ExplorerTests" */;
+			buildConfigurationList = D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Unit Tests" */;
 			buildPhases = (
 				D8C347F3239413DF00441AED /* Sources */,
 				D8C347F4239413DF00441AED /* Frameworks */,
@@ -126,9 +148,9 @@
 			dependencies = (
 				D8C347F9239413DF00441AED /* PBXTargetDependency */,
 			);
-			name = "Mars ExplorerTests";
+			name = "Unit Tests";
 			productName = "Mars ExplorerTests";
-			productReference = D8C347F7239413DF00441AED /* Mars ExplorerTests.xctest */;
+			productReference = D8C347F7239413DF00441AED /* Unit Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -164,7 +186,7 @@
 			projectRoot = "";
 			targets = (
 				D8C347E0239413DE00441AED /* Mars Explorer */,
-				D8C347F6239413DF00441AED /* Mars ExplorerTests */,
+				D8C347F6239413DF00441AED /* Unit Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -348,12 +370,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
-				INFOPLIST_FILE = "Mars Explorer/Info.plist";
+				INFOPLIST_FILE = Source/Extras/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-Explorer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -366,12 +388,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
-				INFOPLIST_FILE = "Mars Explorer/Info.plist";
+				INFOPLIST_FILE = Source/Extras/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-Explorer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -443,7 +465,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Mars ExplorerTests" */ = {
+		D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D8C34804239413DF00441AED /* Debug */,
