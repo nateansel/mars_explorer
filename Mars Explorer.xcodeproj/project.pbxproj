@@ -11,13 +11,16 @@
 		D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E6239413DE00441AED /* SceneDelegate.swift */; };
 		D8C347EE239413DF00441AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C347ED239413DF00441AED /* Assets.xcassets */; };
 		D8C347F1239413DF00441AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C347EF239413DF00441AED /* LaunchScreen.storyboard */; };
-		D8C347FC239413DF00441AED /* Mars_ExplorerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */; };
 		D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480B2394184500441AED /* AppCoordinator.swift */; };
 		D8C3480F239418E000441AED /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480E239418E000441AED /* Rover.swift */; };
 		D8C348152394190900441AED /* photos_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348122394190900441AED /* photos_sample.json */; };
 		D8C348162394190900441AED /* rovers_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348132394190900441AED /* rovers_sample.json */; };
 		D8C348172394190900441AED /* manifest_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348142394190900441AED /* manifest_sample.json */; };
 		D8C34819239419C000441AED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C34818239419C000441AED /* Camera.swift */; };
+		D8C3482023941A4000441AED /* rover_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3481F23941A4000441AED /* rover_sample.json */; };
+		D8C3482223941A6700441AED /* camera_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3482123941A6700441AED /* camera_sample.json */; };
+		D8C3482823941B2600441AED /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482623941B2600441AED /* RoverTests.swift */; };
+		D8C3482923941B2600441AED /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482723941B2600441AED /* CameraTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +41,6 @@
 		D8C347F0239413DF00441AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C347F2239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C347F7239413DF00441AED /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mars_ExplorerTests.swift; sourceTree = "<group>"; };
 		D8C347FD239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8C34807239416F500441AED /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
 		D8C34808239416F500441AED /* license */ = {isa = PBXFileReference; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		D8C348132394190900441AED /* rovers_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rovers_sample.json; path = api/rovers_sample.json; sourceTree = SOURCE_ROOT; };
 		D8C348142394190900441AED /* manifest_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest_sample.json; path = api/manifest_sample.json; sourceTree = SOURCE_ROOT; };
 		D8C34818239419C000441AED /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		D8C3481F23941A4000441AED /* rover_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rover_sample.json; sourceTree = "<group>"; };
+		D8C3482123941A6700441AED /* camera_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camera_sample.json; sourceTree = "<group>"; };
+		D8C3482623941B2600441AED /* RoverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
+		D8C3482723941B2600441AED /* CameraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +109,7 @@
 		D8C347FA239413DF00441AED /* Unit Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D8C347FB239413DF00441AED /* Mars_ExplorerTests.swift */,
+				D8C3482523941B2600441AED /* Model Tests */,
 				D8C34811239418F900441AED /* Sample JSON */,
 				D8C347FD239413DF00441AED /* Info.plist */,
 			);
@@ -145,8 +151,19 @@
 				D8C348142394190900441AED /* manifest_sample.json */,
 				D8C348122394190900441AED /* photos_sample.json */,
 				D8C348132394190900441AED /* rovers_sample.json */,
+				D8C3481F23941A4000441AED /* rover_sample.json */,
+				D8C3482123941A6700441AED /* camera_sample.json */,
 			);
 			name = "Sample JSON";
+			sourceTree = "<group>";
+		};
+		D8C3482523941B2600441AED /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D8C3482623941B2600441AED /* RoverTests.swift */,
+				D8C3482723941B2600441AED /* CameraTests.swift */,
+			);
+			path = "Model Tests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,7 +256,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C3482023941A4000441AED /* rover_sample.json in Resources */,
 				D8C348162394190900441AED /* rovers_sample.json in Resources */,
+				D8C3482223941A6700441AED /* camera_sample.json in Resources */,
 				D8C348172394190900441AED /* manifest_sample.json in Resources */,
 				D8C348152394190900441AED /* photos_sample.json in Resources */,
 			);
@@ -264,7 +283,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C347FC239413DF00441AED /* Mars_ExplorerTests.swift in Sources */,
+				D8C3482923941B2600441AED /* CameraTests.swift in Sources */,
+				D8C3482823941B2600441AED /* RoverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,7 +467,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
-				INFOPLIST_FILE = "Mars ExplorerTests/Info.plist";
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,7 +489,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
-				INFOPLIST_FILE = "Mars ExplorerTests/Info.plist";
+				INFOPLIST_FILE = "Unit Tests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
