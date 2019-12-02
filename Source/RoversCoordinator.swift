@@ -18,6 +18,16 @@ class RoversCoordinator {
 	
 	func start() {
 		let vc = RoversTableViewController()
+		vc.delegate = self
 		navigationController.pushViewController(vc, animated: false)
+	}
+}
+
+// MARK: - RoversTableViewControllerDelegate
+
+extension RoversCoordinator: RoversTableViewControllerDelegate {
+	func display(rover: Rover) {
+		let vc = RoverViewController()
+		navigationController.pushViewController(vc, animated: true)
 	}
 }

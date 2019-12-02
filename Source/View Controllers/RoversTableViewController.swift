@@ -8,9 +8,15 @@
 
 import UIKit
 
+protocol RoversTableViewControllerDelegate: class {
+	func display(rover: Rover)
+}
+
 class RoversTableViewController: UITableViewController {
 	
 	var data: [Rover] = []
+	
+	var delegate: RoversTableViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -52,5 +58,11 @@ class RoversTableViewController: UITableViewController {
 		cell.rover = data[indexPath.row]
 		cell.accessoryType = .disclosureIndicator
 		return cell
+	}
+	
+	// MARK: - UITableViewDelegate
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		delegate?.display(rover: data[indexPath.row])
 	}
 }

@@ -26,6 +26,7 @@
 		D88FE1372395B99C000C42B2 /* photos_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1342395B99B000C42B2 /* photos_sample.json */; };
 		D88FE1382395B99C000C42B2 /* manifest_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1352395B99C000C42B2 /* manifest_sample.json */; };
 		D88FE1392395B99C000C42B2 /* rovers_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1362395B99C000C42B2 /* rovers_sample.json */; };
+		D88FE13B2395BC8D000C42B2 /* RoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE13A2395BC8D000C42B2 /* RoverViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		D88FE1342395B99B000C42B2 /* photos_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos_sample.json; path = api/photos_sample.json; sourceTree = SOURCE_ROOT; };
 		D88FE1352395B99C000C42B2 /* manifest_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest_sample.json; path = api/manifest_sample.json; sourceTree = SOURCE_ROOT; };
 		D88FE1362395B99C000C42B2 /* rovers_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rovers_sample.json; path = api/rovers_sample.json; sourceTree = SOURCE_ROOT; };
+		D88FE13A2395BC8D000C42B2 /* RoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				D88FE0C32395B2F5000C42B2 /* RoversTableViewController.swift */,
+				D88FE13A2395BC8D000C42B2 /* RoverViewController.swift */,
 				D88FE0C42395B2F5000C42B2 /* PicturesTableViewController.swift */,
 			);
 			path = "View Controllers";
@@ -290,6 +293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */,
+				D88FE13B2395BC8D000C42B2 /* RoverViewController.swift in Sources */,
 				D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */,
 				D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */,
 				D88FE0CA2395B2F5000C42B2 /* RoversCoordinator.swift in Sources */,
