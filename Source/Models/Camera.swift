@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Camera: Codable {
+class Camera: Decodable {
 	let name: String
 	let fullName: String
 }

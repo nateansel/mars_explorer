@@ -8,11 +8,11 @@
 
 import Foundation
 
-enum RoverStatus: String, Codable {
+enum RoverStatus: String, Decodable {
 	case active
 }
 
-class Rover: Codable {
+class Rover: Decodable {
 	let id: Int
 	let name: String
 	let landingDate: Date

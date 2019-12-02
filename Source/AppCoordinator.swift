@@ -16,6 +16,7 @@ class AppCoordinator {
 	}
 	
 	func start() {
-		
+		let vc = PicturesTableViewController()
+		navigationController.pushViewController(vc, animated: false)
 	}
 }

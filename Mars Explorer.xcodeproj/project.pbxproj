@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D8B7B9F0239573610063D1F1 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9EF239573610063D1F1 /* RoverTests.swift */; };
+		D8B7B9F3239574260063D1F1 /* PicturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */; };
+		D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */; };
 		D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E4239413DE00441AED /* AppDelegate.swift */; };
 		D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E6239413DE00441AED /* SceneDelegate.swift */; };
 		D8C347EE239413DF00441AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C347ED239413DF00441AED /* Assets.xcassets */; };
@@ -19,8 +22,8 @@
 		D8C34819239419C000441AED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C34818239419C000441AED /* Camera.swift */; };
 		D8C3482023941A4000441AED /* rover_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3481F23941A4000441AED /* rover_sample.json */; };
 		D8C3482223941A6700441AED /* camera_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3482123941A6700441AED /* camera_sample.json */; };
-		D8C3482823941B2600441AED /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482623941B2600441AED /* RoverTests.swift */; };
 		D8C3482923941B2600441AED /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482723941B2600441AED /* CameraTests.swift */; };
+		D8C3482B23956ECB00441AED /* BasicDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8B7B9EF239573610063D1F1 /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
+		D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesTableViewController.swift; sourceTree = "<group>"; };
+		D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
 		D8C347E1239413DE00441AED /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C347E4239413DE00441AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C347E6239413DE00441AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -53,8 +59,8 @@
 		D8C34818239419C000441AED /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
 		D8C3481F23941A4000441AED /* rover_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rover_sample.json; sourceTree = "<group>"; };
 		D8C3482123941A6700441AED /* camera_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camera_sample.json; sourceTree = "<group>"; };
-		D8C3482623941B2600441AED /* RoverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
 		D8C3482723941B2600441AED /* CameraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
+		D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDecodableTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D8B7B9F1239574070063D1F1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */,
+				D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
 		D8C347D8239413DE00441AED = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +115,7 @@
 				D8C347E4239413DE00441AED /* AppDelegate.swift */,
 				D8C347E6239413DE00441AED /* SceneDelegate.swift */,
 				D8C3480B2394184500441AED /* AppCoordinator.swift */,
+				D8B7B9F1239574070063D1F1 /* View Controllers */,
 				D8C3480D239418CF00441AED /* Models */,
 				D8C3480A239417A100441AED /* Extras */,
 			);
@@ -160,7 +176,8 @@
 		D8C3482523941B2600441AED /* Model Tests */ = {
 			isa = PBXGroup;
 			children = (
-				D8C3482623941B2600441AED /* RoverTests.swift */,
+				D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */,
+				D8B7B9EF239573610063D1F1 /* RoverTests.swift */,
 				D8C3482723941B2600441AED /* CameraTests.swift */,
 			);
 			path = "Model Tests";
@@ -271,11 +288,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B7B9F3239574260063D1F1 /* PicturesTableViewController.swift in Sources */,
 				D8C3480F239418E000441AED /* Rover.swift in Sources */,
 				D8C34819239419C000441AED /* Camera.swift in Sources */,
 				D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */,
 				D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */,
 				D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */,
+				D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,8 +302,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8B7B9F0239573610063D1F1 /* RoverTests.swift in Sources */,
 				D8C3482923941B2600441AED /* CameraTests.swift in Sources */,
-				D8C3482823941B2600441AED /* RoverTests.swift in Sources */,
+				D8C3482B23956ECB00441AED /* BasicDecodableTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
