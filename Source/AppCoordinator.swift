@@ -9,14 +9,15 @@
 import UIKit
 
 class AppCoordinator {
-	let navigationController: UINavigationController
+	let tabBarController: UITabBarController
 	
-	init(navigationController: UINavigationController) {
-		self.navigationController = navigationController
+	init(tabBarController: UITabBarController) {
+		self.tabBarController = tabBarController
 	}
 	
 	func start() {
-		let vc = PicturesTableViewController()
-		navigationController.pushViewController(vc, animated: false)
+		let roverCoor = RoversCoordinator(navigationController: UINavigationController())
+		roverCoor.start()
+		tabBarController.setViewControllers([roverCoor.navigationController], animated: false)
 	}
 }

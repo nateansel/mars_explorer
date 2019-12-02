@@ -10,6 +10,8 @@
 		D8B7B9F0239573610063D1F1 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9EF239573610063D1F1 /* RoverTests.swift */; };
 		D8B7B9F3239574260063D1F1 /* PicturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */; };
 		D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */; };
+		D8B7B9F8239575A40063D1F1 /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */; };
+		D8B7B9FA239577030063D1F1 /* RoversCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */; };
 		D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E4239413DE00441AED /* AppDelegate.swift */; };
 		D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E6239413DE00441AED /* SceneDelegate.swift */; };
 		D8C347EE239413DF00441AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C347ED239413DF00441AED /* Assets.xcassets */; };
@@ -40,6 +42,8 @@
 		D8B7B9EF239573610063D1F1 /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
 		D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesTableViewController.swift; sourceTree = "<group>"; };
 		D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
+		D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
+		D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversCoordinator.swift; sourceTree = "<group>"; };
 		D8C347E1239413DE00441AED /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C347E4239413DE00441AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C347E6239413DE00441AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -90,6 +94,14 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		D8B7B9F6239575860063D1F1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		D8C347D8239413DE00441AED = {
 			isa = PBXGroup;
 			children = (
@@ -115,7 +127,9 @@
 				D8C347E4239413DE00441AED /* AppDelegate.swift */,
 				D8C347E6239413DE00441AED /* SceneDelegate.swift */,
 				D8C3480B2394184500441AED /* AppCoordinator.swift */,
+				D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */,
 				D8B7B9F1239574070063D1F1 /* View Controllers */,
+				D8B7B9F6239575860063D1F1 /* Cells */,
 				D8C3480D239418CF00441AED /* Models */,
 				D8C3480A239417A100441AED /* Extras */,
 			);
@@ -292,7 +306,9 @@
 				D8C3480F239418E000441AED /* Rover.swift in Sources */,
 				D8C34819239419C000441AED /* Camera.swift in Sources */,
 				D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */,
+				D8B7B9F8239575A40063D1F1 /* RoverTableViewCell.swift in Sources */,
 				D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */,
+				D8B7B9FA239577030063D1F1 /* RoversCoordinator.swift in Sources */,
 				D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */,
 				D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */,
 			);
@@ -458,7 +474,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -476,7 +492,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

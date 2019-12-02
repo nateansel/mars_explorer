@@ -11,4 +11,9 @@ import Foundation
 class Camera: Decodable {
 	let name: String
 	let fullName: String
+	
+	init(name: String, fullName: String) {
+		self.name = name
+		self.fullName = fullName
+	}
 }
