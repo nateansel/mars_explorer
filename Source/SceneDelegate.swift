@@ -14,7 +14,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 	let appCoor = AppCoordinator(tabBarController: UITabBarController())
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-		// Initalize our Window and start the app
+		// Initalize the UIWindow and start the app
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(windowScene: windowScene)
 		window?.rootViewController = appCoor.tabBarController

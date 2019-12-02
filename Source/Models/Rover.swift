@@ -9,7 +9,7 @@
 import Foundation
 
 enum RoverStatus: String, Decodable {
-	case active
+	case active, complete
 }
 
 class Rover: Decodable {

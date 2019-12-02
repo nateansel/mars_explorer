@@ -13,6 +13,7 @@ class RoversCoordinator {
 	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
+		navigationController.navigationBar.prefersLargeTitles = true
 		navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
 	}
 	
@@ -27,7 +28,8 @@ class RoversCoordinator {
 
 extension RoversCoordinator: RoversTableViewControllerDelegate {
 	func display(rover: Rover) {
-		let vc = RoverViewController()
+		let vc = RoverTableViewController()
+		vc.rover = rover
 		navigationController.pushViewController(vc, animated: true)
 	}
 }

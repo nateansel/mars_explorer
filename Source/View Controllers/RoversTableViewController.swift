@@ -20,6 +20,7 @@ class RoversTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+		title = "Rovers"
 		
 		// For testing
 		data = [
@@ -35,8 +36,28 @@ class RoversTableViewController: UITableViewController {
 				cameras: [
 					Camera(
 						name: "FHAZ",
-						fullName: "Front Hazard Avoidance Camera")
-			])
+						fullName: "Front Hazard Avoidance Camera"),
+					Camera(
+						name: "NAVCAM",
+						fullName: "Navigation Camera")
+			]),
+			Rover(
+				id: 7,
+				name: "Spirit",
+				landingDate: Calendar.current.date(from: DateComponents(year: 2004, month: 1, day: 4))!,
+				launchDate: Calendar.current.date(from: DateComponents(year: 2003, month: 6, day: 10))!,
+				status: .complete,
+				maxSol: 2208,
+				maxDate: Calendar.current.date(from: DateComponents(year: 2010, month: 3, day: 21))!,
+				totalPhotos: 124550,
+				cameras: [
+						Camera(
+							name: "FHAZ",
+							fullName: "Front Hazard Avoidance Camera"),
+						Camera(
+							name: "NAVCAM",
+							fullName: "Navigation Camera")
+				])
 		]
 		
 		tableView.register(RoverTableViewCell.self, forCellReuseIdentifier: "roverCell")

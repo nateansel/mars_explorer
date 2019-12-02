@@ -9,6 +9,7 @@
 import UIKit
 
 class RoverTableViewCell: UITableViewCell {
+	
 	// MARK: - Properties
 	
 	var rover: Rover? {
@@ -37,8 +38,7 @@ class RoverTableViewCell: UITableViewCell {
 	}
 	
 	private func commonInit() {
-		titleLabel.translatesAutoresizingMaskIntoConstraints = false
-		contentView.addSubview(titleLabel)
+		contentView.prepareViewForConstraints(titleLabel)
 		
 		NSLayoutConstraint.activate([
 			titleLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
