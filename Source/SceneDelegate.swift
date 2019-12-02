@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  Mars Explorer
+//  Mars Exploxer
 //
-//  Created by Nathan Ansel on 12/1/19.
+//  Created by Nathan Ansel on 12/2/19.
 //  Copyright © 2019 Nathan Ansel. All rights reserved.
 //
 
@@ -11,16 +11,14 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
-
+	let appCoor = AppCoordinator(tabBarController: UITabBarController())
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-		// Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
-		// If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
-		// This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
+		// Initalize our Window and start the app
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(windowScene: windowScene)
-		window?.rootViewController = UIViewController()
-		window?.rootViewController?.view.backgroundColor = .green
+		window?.rootViewController = appCoor.tabBarController
+		appCoor.start()
 		window?.makeKeyAndVisible()
 	}
 

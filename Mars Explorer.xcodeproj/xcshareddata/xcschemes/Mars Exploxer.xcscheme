@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8C347E0239413DE00441AED"
+               BlueprintIdentifier = "D88FE0A42395B265000C42B2"
                BuildableName = "Mars Explorer.app"
                BlueprintName = "Mars Explorer"
                ReferencedContainer = "container:Mars Explorer.xcodeproj">
@@ -32,9 +32,29 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D8C347F6239413DF00441AED"
+               BlueprintIdentifier = "D88FE0E12395B4DC000C42B2"
                BuildableName = "Unit Tests.xctest"
                BlueprintName = "Unit Tests"
+               ReferencedContainer = "container:Mars Explorer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D88FE1152395B7B1000C42B2"
+               BuildableName = "Mars ExplorerTests.xctest"
+               BlueprintName = "Mars ExplorerTests"
+               ReferencedContainer = "container:Mars Explorer.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D88FE1282395B805000C42B2"
+               BuildableName = "Mars ExploxerTests2.xctest"
+               BlueprintName = "Mars ExploxerTests2"
                ReferencedContainer = "container:Mars Explorer.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -54,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8C347E0239413DE00441AED"
+            BlueprintIdentifier = "D88FE0A42395B265000C42B2"
             BuildableName = "Mars Explorer.app"
             BlueprintName = "Mars Explorer"
             ReferencedContainer = "container:Mars Explorer.xcodeproj">
@@ -71,7 +91,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D8C347E0239413DE00441AED"
+            BlueprintIdentifier = "D88FE0A42395B265000C42B2"
             BuildableName = "Mars Explorer.app"
             BlueprintName = "Mars Explorer"
             ReferencedContainer = "container:Mars Explorer.xcodeproj">

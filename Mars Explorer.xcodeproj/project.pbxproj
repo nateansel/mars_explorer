@@ -7,75 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D8B7B9F0239573610063D1F1 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9EF239573610063D1F1 /* RoverTests.swift */; };
-		D8B7B9F3239574260063D1F1 /* PicturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */; };
-		D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */; };
-		D8B7B9F8239575A40063D1F1 /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */; };
-		D8B7B9FA239577030063D1F1 /* RoversCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */; };
-		D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E4239413DE00441AED /* AppDelegate.swift */; };
-		D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C347E6239413DE00441AED /* SceneDelegate.swift */; };
-		D8C347EE239413DF00441AED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C347ED239413DF00441AED /* Assets.xcassets */; };
-		D8C347F1239413DF00441AED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C347EF239413DF00441AED /* LaunchScreen.storyboard */; };
-		D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480B2394184500441AED /* AppCoordinator.swift */; };
-		D8C3480F239418E000441AED /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3480E239418E000441AED /* Rover.swift */; };
-		D8C348152394190900441AED /* photos_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348122394190900441AED /* photos_sample.json */; };
-		D8C348162394190900441AED /* rovers_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348132394190900441AED /* rovers_sample.json */; };
-		D8C348172394190900441AED /* manifest_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C348142394190900441AED /* manifest_sample.json */; };
-		D8C34819239419C000441AED /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C34818239419C000441AED /* Camera.swift */; };
-		D8C3482023941A4000441AED /* rover_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3481F23941A4000441AED /* rover_sample.json */; };
-		D8C3482223941A6700441AED /* camera_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D8C3482123941A6700441AED /* camera_sample.json */; };
-		D8C3482923941B2600441AED /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482723941B2600441AED /* CameraTests.swift */; };
-		D8C3482B23956ECB00441AED /* BasicDecodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */; };
+		D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0A82395B265000C42B2 /* AppDelegate.swift */; };
+		D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */; };
+		D88FE0B22395B267000C42B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0B12395B267000C42B2 /* Assets.xcassets */; };
+		D88FE0B52395B267000C42B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0B32395B267000C42B2 /* LaunchScreen.storyboard */; };
+		D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0BF2395B2F5000C42B2 /* Rover.swift */; };
+		D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0C02395B2F5000C42B2 /* Camera.swift */; };
+		D88FE0CA2395B2F5000C42B2 /* RoversCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0C12395B2F5000C42B2 /* RoversCoordinator.swift */; };
+		D88FE0CB2395B2F5000C42B2 /* RoversTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0C32395B2F5000C42B2 /* RoversTableViewController.swift */; };
+		D88FE0CC2395B2F5000C42B2 /* PicturesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0C42395B2F5000C42B2 /* PicturesTableViewController.swift */; };
+		D88FE0CD2395B2F5000C42B2 /* RoverTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0C62395B2F5000C42B2 /* RoverTableViewCell.swift */; };
+		D88FE0CF2395B335000C42B2 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0CE2395B335000C42B2 /* AppCoordinator.swift */; };
+		D88FE1202395B7C3000C42B2 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0D22395B4CB000C42B2 /* RoverTests.swift */; };
+		D88FE1212395B7C3000C42B2 /* CameraTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0D32395B4CB000C42B2 /* CameraTests.swift */; };
+		D88FE1222395B7C3000C42B2 /* XCTest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0D42395B4CB000C42B2 /* XCTest+Extensions.swift */; };
+		D88FE1232395B7C3000C42B2 /* camera_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0D52395B4CB000C42B2 /* camera_sample.json */; };
+		D88FE1242395B7C3000C42B2 /* rover_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0D62395B4CB000C42B2 /* rover_sample.json */; };
+		D88FE1372395B99C000C42B2 /* photos_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1342395B99B000C42B2 /* photos_sample.json */; };
+		D88FE1382395B99C000C42B2 /* manifest_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1352395B99C000C42B2 /* manifest_sample.json */; };
+		D88FE1392395B99C000C42B2 /* rovers_sample.json in Resources */ = {isa = PBXBuildFile; fileRef = D88FE1362395B99C000C42B2 /* rovers_sample.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		D8C347F8239413DF00441AED /* PBXContainerItemProxy */ = {
+		D88FE11B2395B7B1000C42B2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = D8C347D9239413DE00441AED /* Project object */;
+			containerPortal = D88FE09D2395B265000C42B2 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = D8C347E0239413DE00441AED;
-			remoteInfo = "Mars Explorer";
+			remoteGlobalIDString = D88FE0A42395B265000C42B2;
+			remoteInfo = "Mars Exploxer";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		D8B7B9EF239573610063D1F1 /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
-		D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PicturesTableViewController.swift; sourceTree = "<group>"; };
-		D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
-		D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
-		D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoversCoordinator.swift; sourceTree = "<group>"; };
-		D8C347E1239413DE00441AED /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8C347E4239413DE00441AED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D8C347E6239413DE00441AED /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8C347ED239413DF00441AED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D8C347F0239413DF00441AED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D8C347F2239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8C347F7239413DF00441AED /* Unit Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Unit Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		D8C347FD239413DF00441AED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8C34807239416F500441AED /* readme.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = readme.md; sourceTree = "<group>"; };
-		D8C34808239416F500441AED /* license */ = {isa = PBXFileReference; lastKnownFileType = text; path = license; sourceTree = "<group>"; };
-		D8C348092394175D00441AED /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
-		D8C3480B2394184500441AED /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
-		D8C3480E239418E000441AED /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
-		D8C348122394190900441AED /* photos_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos_sample.json; path = api/photos_sample.json; sourceTree = SOURCE_ROOT; };
-		D8C348132394190900441AED /* rovers_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rovers_sample.json; path = api/rovers_sample.json; sourceTree = SOURCE_ROOT; };
-		D8C348142394190900441AED /* manifest_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest_sample.json; path = api/manifest_sample.json; sourceTree = SOURCE_ROOT; };
-		D8C34818239419C000441AED /* Camera.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
-		D8C3481F23941A4000441AED /* rover_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = rover_sample.json; sourceTree = "<group>"; };
-		D8C3482123941A6700441AED /* camera_sample.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = camera_sample.json; sourceTree = "<group>"; };
-		D8C3482723941B2600441AED /* CameraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
-		D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicDecodableTests.swift; sourceTree = "<group>"; };
+		D88FE0A52395B265000C42B2 /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FE0A82395B265000C42B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D88FE0B12395B267000C42B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D88FE0B42395B267000C42B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D88FE0B62395B267000C42B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88FE0BF2395B2F5000C42B2 /* Rover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		D88FE0C02395B2F5000C42B2 /* Camera.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Camera.swift; sourceTree = "<group>"; };
+		D88FE0C12395B2F5000C42B2 /* RoversCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversCoordinator.swift; sourceTree = "<group>"; };
+		D88FE0C32395B2F5000C42B2 /* RoversTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoversTableViewController.swift; sourceTree = "<group>"; };
+		D88FE0C42395B2F5000C42B2 /* PicturesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PicturesTableViewController.swift; sourceTree = "<group>"; };
+		D88FE0C62395B2F5000C42B2 /* RoverTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTableViewCell.swift; sourceTree = "<group>"; };
+		D88FE0CE2395B335000C42B2 /* AppCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		D88FE0D22395B4CB000C42B2 /* RoverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
+		D88FE0D32395B4CB000C42B2 /* CameraTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraTests.swift; sourceTree = "<group>"; };
+		D88FE0D42395B4CB000C42B2 /* XCTest+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "XCTest+Extensions.swift"; sourceTree = "<group>"; };
+		D88FE0D52395B4CB000C42B2 /* camera_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = camera_sample.json; sourceTree = "<group>"; };
+		D88FE0D62395B4CB000C42B2 /* rover_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = rover_sample.json; sourceTree = "<group>"; };
+		D88FE0D72395B4CB000C42B2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D88FE1162395B7B1000C42B2 /* Mars ExplorerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mars ExplorerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D88FE1342395B99B000C42B2 /* photos_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = photos_sample.json; path = api/photos_sample.json; sourceTree = SOURCE_ROOT; };
+		D88FE1352395B99C000C42B2 /* manifest_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = manifest_sample.json; path = api/manifest_sample.json; sourceTree = SOURCE_ROOT; };
+		D88FE1362395B99C000C42B2 /* rovers_sample.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = rovers_sample.json; path = api/rovers_sample.json; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		D8C347DE239413DE00441AED /* Frameworks */ = {
+		D88FE0A22395B265000C42B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8C347F4239413DF00441AED /* Frameworks */ = {
+		D88FE1132395B7B1000C42B2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -85,176 +82,166 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D8B7B9F1239574070063D1F1 /* View Controllers */ = {
+		D88FE09C2395B265000C42B2 = {
 			isa = PBXGroup;
 			children = (
-				D8B7B9F4239574BD0063D1F1 /* RoversTableViewController.swift */,
-				D8B7B9F2239574260063D1F1 /* PicturesTableViewController.swift */,
-			);
-			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		D8B7B9F6239575860063D1F1 /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-				D8B7B9F7239575A40063D1F1 /* RoverTableViewCell.swift */,
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
-		D8C347D8239413DE00441AED = {
-			isa = PBXGroup;
-			children = (
-				D8C347E3239413DE00441AED /* Source */,
-				D8C347FA239413DF00441AED /* Unit Tests */,
-				D8C347E2239413DE00441AED /* Products */,
-				D8C34806239416DA00441AED /* Supporting Files */,
+				D88FE0A72395B265000C42B2 /* Source */,
+				D88FE0D02395B4CB000C42B2 /* Unit Tests */,
+				D88FE0A62395B265000C42B2 /* Products */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 1;
 		};
-		D8C347E2239413DE00441AED /* Products */ = {
+		D88FE0A62395B265000C42B2 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D8C347E1239413DE00441AED /* Mars Explorer.app */,
-				D8C347F7239413DF00441AED /* Unit Tests.xctest */,
+				D88FE0A52395B265000C42B2 /* Mars Explorer.app */,
+				D88FE1162395B7B1000C42B2 /* Mars ExplorerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		D8C347E3239413DE00441AED /* Source */ = {
+		D88FE0A72395B265000C42B2 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				D8C347E4239413DE00441AED /* AppDelegate.swift */,
-				D8C347E6239413DE00441AED /* SceneDelegate.swift */,
-				D8C3480B2394184500441AED /* AppCoordinator.swift */,
-				D8B7B9F9239577030063D1F1 /* RoversCoordinator.swift */,
-				D8B7B9F1239574070063D1F1 /* View Controllers */,
-				D8B7B9F6239575860063D1F1 /* Cells */,
-				D8C3480D239418CF00441AED /* Models */,
-				D8C3480A239417A100441AED /* Extras */,
+				D88FE0A82395B265000C42B2 /* AppDelegate.swift */,
+				D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */,
+				D88FE0CE2395B335000C42B2 /* AppCoordinator.swift */,
+				D88FE0C12395B2F5000C42B2 /* RoversCoordinator.swift */,
+				D88FE0C22395B2F5000C42B2 /* View Controllers */,
+				D88FE0C52395B2F5000C42B2 /* Cells */,
+				D88FE0BE2395B2F5000C42B2 /* Models */,
+				D88FE0BC2395B280000C42B2 /* Extras */,
 			);
 			path = Source;
 			sourceTree = "<group>";
 		};
-		D8C347FA239413DF00441AED /* Unit Tests */ = {
+		D88FE0BC2395B280000C42B2 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				D8C3482523941B2600441AED /* Model Tests */,
-				D8C34811239418F900441AED /* Sample JSON */,
-				D8C347FD239413DF00441AED /* Info.plist */,
-			);
-			path = "Unit Tests";
-			sourceTree = "<group>";
-		};
-		D8C34806239416DA00441AED /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				D8C34807239416F500441AED /* readme.md */,
-				D8C34808239416F500441AED /* license */,
-				D8C348092394175D00441AED /* .gitignore */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D8C3480A239417A100441AED /* Extras */ = {
-			isa = PBXGroup;
-			children = (
-				D8C347ED239413DF00441AED /* Assets.xcassets */,
-				D8C347EF239413DF00441AED /* LaunchScreen.storyboard */,
-				D8C347F2239413DF00441AED /* Info.plist */,
+				D88FE0B12395B267000C42B2 /* Assets.xcassets */,
+				D88FE0B32395B267000C42B2 /* LaunchScreen.storyboard */,
+				D88FE0B62395B267000C42B2 /* Info.plist */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
 		};
-		D8C3480D239418CF00441AED /* Models */ = {
+		D88FE0BE2395B2F5000C42B2 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D8C3480E239418E000441AED /* Rover.swift */,
-				D8C34818239419C000441AED /* Camera.swift */,
+				D88FE0BF2395B2F5000C42B2 /* Rover.swift */,
+				D88FE0C02395B2F5000C42B2 /* Camera.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D8C34811239418F900441AED /* Sample JSON */ = {
+		D88FE0C22395B2F5000C42B2 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D8C348142394190900441AED /* manifest_sample.json */,
-				D8C348122394190900441AED /* photos_sample.json */,
-				D8C348132394190900441AED /* rovers_sample.json */,
-				D8C3481F23941A4000441AED /* rover_sample.json */,
-				D8C3482123941A6700441AED /* camera_sample.json */,
+				D88FE0C32395B2F5000C42B2 /* RoversTableViewController.swift */,
+				D88FE0C42395B2F5000C42B2 /* PicturesTableViewController.swift */,
 			);
-			name = "Sample JSON";
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		D8C3482523941B2600441AED /* Model Tests */ = {
+		D88FE0C52395B2F5000C42B2 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D8C3482A23956ECB00441AED /* BasicDecodableTests.swift */,
-				D8B7B9EF239573610063D1F1 /* RoverTests.swift */,
-				D8C3482723941B2600441AED /* CameraTests.swift */,
+				D88FE0C62395B2F5000C42B2 /* RoverTableViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D88FE0D02395B4CB000C42B2 /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D88FE0D12395B4CB000C42B2 /* Model Tests */,
+				D88FE1332395B981000C42B2 /* Sample JSON */,
+				D88FE0D72395B4CB000C42B2 /* Info.plist */,
+			);
+			path = "Unit Tests";
+			sourceTree = "<group>";
+		};
+		D88FE0D12395B4CB000C42B2 /* Model Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D88FE0D22395B4CB000C42B2 /* RoverTests.swift */,
+				D88FE0D32395B4CB000C42B2 /* CameraTests.swift */,
+				D88FE0D42395B4CB000C42B2 /* XCTest+Extensions.swift */,
 			);
 			path = "Model Tests";
+			sourceTree = "<group>";
+		};
+		D88FE1332395B981000C42B2 /* Sample JSON */ = {
+			isa = PBXGroup;
+			children = (
+				D88FE0D52395B4CB000C42B2 /* camera_sample.json */,
+				D88FE0D62395B4CB000C42B2 /* rover_sample.json */,
+				D88FE1352395B99C000C42B2 /* manifest_sample.json */,
+				D88FE1342395B99B000C42B2 /* photos_sample.json */,
+				D88FE1362395B99C000C42B2 /* rovers_sample.json */,
+			);
+			name = "Sample JSON";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D8C347E0239413DE00441AED /* Mars Explorer */ = {
+		D88FE0A42395B265000C42B2 /* Mars Explorer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8C34800239413DF00441AED /* Build configuration list for PBXNativeTarget "Mars Explorer" */;
+			buildConfigurationList = D88FE0B92395B267000C42B2 /* Build configuration list for PBXNativeTarget "Mars Explorer" */;
 			buildPhases = (
-				D8C347DD239413DE00441AED /* Sources */,
-				D8C347DE239413DE00441AED /* Frameworks */,
-				D8C347DF239413DE00441AED /* Resources */,
+				D88FE0A12395B265000C42B2 /* Sources */,
+				D88FE0A22395B265000C42B2 /* Frameworks */,
+				D88FE0A32395B265000C42B2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "Mars Explorer";
-			productName = "Mars Explorer";
-			productReference = D8C347E1239413DE00441AED /* Mars Explorer.app */;
+			productName = "Mars Exploxer";
+			productReference = D88FE0A52395B265000C42B2 /* Mars Explorer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		D8C347F6239413DF00441AED /* Unit Tests */ = {
+		D88FE1152395B7B1000C42B2 /* Mars ExplorerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Unit Tests" */;
+			buildConfigurationList = D88FE11D2395B7B1000C42B2 /* Build configuration list for PBXNativeTarget "Mars ExplorerTests" */;
 			buildPhases = (
-				D8C347F3239413DF00441AED /* Sources */,
-				D8C347F4239413DF00441AED /* Frameworks */,
-				D8C347F5239413DF00441AED /* Resources */,
+				D88FE1122395B7B1000C42B2 /* Sources */,
+				D88FE1132395B7B1000C42B2 /* Frameworks */,
+				D88FE1142395B7B1000C42B2 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				D8C347F9239413DF00441AED /* PBXTargetDependency */,
+				D88FE11C2395B7B1000C42B2 /* PBXTargetDependency */,
 			);
-			name = "Unit Tests";
-			productName = "Mars ExplorerTests";
-			productReference = D8C347F7239413DF00441AED /* Unit Tests.xctest */;
+			name = "Mars ExplorerTests";
+			productName = "Mars ExploxerTests";
+			productReference = D88FE1162395B7B1000C42B2 /* Mars ExplorerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		D8C347D9239413DE00441AED /* Project object */ = {
+		D88FE09D2395B265000C42B2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
 				LastUpgradeCheck = 1120;
 				ORGANIZATIONNAME = "Nathan Ansel";
 				TargetAttributes = {
-					D8C347E0239413DE00441AED = {
+					D88FE0A42395B265000C42B2 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
-					D8C347F6239413DF00441AED = {
+					D88FE1152395B7B1000C42B2 = {
 						CreatedOnToolsVersion = 11.2.1;
-						TestTargetID = D8C347E0239413DE00441AED;
+						TestTargetID = D88FE0A42395B265000C42B2;
 					};
 				};
 			};
-			buildConfigurationList = D8C347DC239413DE00441AED /* Build configuration list for PBXProject "Mars Explorer" */;
+			buildConfigurationList = D88FE0A02395B265000C42B2 /* Build configuration list for PBXProject "Mars Explorer" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -262,83 +249,83 @@
 				en,
 				Base,
 			);
-			mainGroup = D8C347D8239413DE00441AED;
-			productRefGroup = D8C347E2239413DE00441AED /* Products */;
+			mainGroup = D88FE09C2395B265000C42B2;
+			productRefGroup = D88FE0A62395B265000C42B2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D8C347E0239413DE00441AED /* Mars Explorer */,
-				D8C347F6239413DF00441AED /* Unit Tests */,
+				D88FE0A42395B265000C42B2 /* Mars Explorer */,
+				D88FE1152395B7B1000C42B2 /* Mars ExplorerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		D8C347DF239413DE00441AED /* Resources */ = {
+		D88FE0A32395B265000C42B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C347F1239413DF00441AED /* LaunchScreen.storyboard in Resources */,
-				D8C347EE239413DF00441AED /* Assets.xcassets in Resources */,
+				D88FE0B52395B267000C42B2 /* LaunchScreen.storyboard in Resources */,
+				D88FE0B22395B267000C42B2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8C347F5239413DF00441AED /* Resources */ = {
+		D88FE1142395B7B1000C42B2 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8C3482023941A4000441AED /* rover_sample.json in Resources */,
-				D8C348162394190900441AED /* rovers_sample.json in Resources */,
-				D8C3482223941A6700441AED /* camera_sample.json in Resources */,
-				D8C348172394190900441AED /* manifest_sample.json in Resources */,
-				D8C348152394190900441AED /* photos_sample.json in Resources */,
+				D88FE1392395B99C000C42B2 /* rovers_sample.json in Resources */,
+				D88FE1382395B99C000C42B2 /* manifest_sample.json in Resources */,
+				D88FE1242395B7C3000C42B2 /* rover_sample.json in Resources */,
+				D88FE1232395B7C3000C42B2 /* camera_sample.json in Resources */,
+				D88FE1372395B99C000C42B2 /* photos_sample.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		D8C347DD239413DE00441AED /* Sources */ = {
+		D88FE0A12395B265000C42B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B7B9F3239574260063D1F1 /* PicturesTableViewController.swift in Sources */,
-				D8C3480F239418E000441AED /* Rover.swift in Sources */,
-				D8C34819239419C000441AED /* Camera.swift in Sources */,
-				D8C3480C2394184500441AED /* AppCoordinator.swift in Sources */,
-				D8B7B9F8239575A40063D1F1 /* RoverTableViewCell.swift in Sources */,
-				D8C347E5239413DE00441AED /* AppDelegate.swift in Sources */,
-				D8B7B9FA239577030063D1F1 /* RoversCoordinator.swift in Sources */,
-				D8C347E7239413DE00441AED /* SceneDelegate.swift in Sources */,
-				D8B7B9F5239574BD0063D1F1 /* RoversTableViewController.swift in Sources */,
+				D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */,
+				D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */,
+				D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */,
+				D88FE0CA2395B2F5000C42B2 /* RoversCoordinator.swift in Sources */,
+				D88FE0CD2395B2F5000C42B2 /* RoverTableViewCell.swift in Sources */,
+				D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */,
+				D88FE0CF2395B335000C42B2 /* AppCoordinator.swift in Sources */,
+				D88FE0CC2395B2F5000C42B2 /* PicturesTableViewController.swift in Sources */,
+				D88FE0CB2395B2F5000C42B2 /* RoversTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D8C347F3239413DF00441AED /* Sources */ = {
+		D88FE1122395B7B1000C42B2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D8B7B9F0239573610063D1F1 /* RoverTests.swift in Sources */,
-				D8C3482923941B2600441AED /* CameraTests.swift in Sources */,
-				D8C3482B23956ECB00441AED /* BasicDecodableTests.swift in Sources */,
+				D88FE1222395B7C3000C42B2 /* XCTest+Extensions.swift in Sources */,
+				D88FE1212395B7C3000C42B2 /* CameraTests.swift in Sources */,
+				D88FE1202395B7C3000C42B2 /* RoverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		D8C347F9239413DF00441AED /* PBXTargetDependency */ = {
+		D88FE11C2395B7B1000C42B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D8C347E0239413DE00441AED /* Mars Explorer */;
-			targetProxy = D8C347F8239413DF00441AED /* PBXContainerItemProxy */;
+			target = D88FE0A42395B265000C42B2 /* Mars Explorer */;
+			targetProxy = D88FE11B2395B7B1000C42B2 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D8C347EF239413DF00441AED /* LaunchScreen.storyboard */ = {
+		D88FE0B32395B267000C42B2 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D8C347F0239413DF00441AED /* Base */,
+				D88FE0B42395B267000C42B2 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -346,7 +333,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		D8C347FE239413DF00441AED /* Debug */ = {
+		D88FE0B72395B267000C42B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -406,7 +393,7 @@
 			};
 			name = Debug;
 		};
-		D8C347FF239413DF00441AED /* Release */ = {
+		D88FE0B82395B267000C42B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -460,7 +447,7 @@
 			};
 			name = Release;
 		};
-		D8C34801239413DF00441AED /* Debug */ = {
+		D88FE0BA2395B267000C42B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -471,14 +458,14 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		D8C34802239413DF00441AED /* Release */ = {
+		D88FE0BB2395B267000C42B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -489,28 +476,26 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.NathanAnsel.marsexplorer;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-Explorer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
-		D8C34804239413DF00441AED /* Debug */ = {
+		D88FE11E2395B7B1000C42B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
 				INFOPLIST_FILE = "Unit Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-ExplorerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-ExploxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -518,21 +503,19 @@
 			};
 			name = Debug;
 		};
-		D8C34805239413DF00441AED /* Release */ = {
+		D88FE11F2395B7B1000C42B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 37E2RLU4H9;
 				INFOPLIST_FILE = "Unit Tests/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-ExplorerTests";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.NathanAnsel.Mars-ExploxerTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -543,34 +526,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D8C347DC239413DE00441AED /* Build configuration list for PBXProject "Mars Explorer" */ = {
+		D88FE0A02395B265000C42B2 /* Build configuration list for PBXProject "Mars Explorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8C347FE239413DF00441AED /* Debug */,
-				D8C347FF239413DF00441AED /* Release */,
+				D88FE0B72395B267000C42B2 /* Debug */,
+				D88FE0B82395B267000C42B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8C34800239413DF00441AED /* Build configuration list for PBXNativeTarget "Mars Explorer" */ = {
+		D88FE0B92395B267000C42B2 /* Build configuration list for PBXNativeTarget "Mars Explorer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8C34801239413DF00441AED /* Debug */,
-				D8C34802239413DF00441AED /* Release */,
+				D88FE0BA2395B267000C42B2 /* Debug */,
+				D88FE0BB2395B267000C42B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D8C34803239413DF00441AED /* Build configuration list for PBXNativeTarget "Unit Tests" */ = {
+		D88FE11D2395B7B1000C42B2 /* Build configuration list for PBXNativeTarget "Mars ExplorerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D8C34804239413DF00441AED /* Debug */,
-				D8C34805239413DF00441AED /* Release */,
+				D88FE11E2395B7B1000C42B2 /* Debug */,
+				D88FE11F2395B7B1000C42B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = D8C347D9239413DE00441AED /* Project object */;
+	rootObject = D88FE09D2395B265000C42B2 /* Project object */;
 }

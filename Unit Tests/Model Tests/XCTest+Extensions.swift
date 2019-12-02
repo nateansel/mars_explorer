@@ -7,7 +7,6 @@
 //
 
 import XCTest
-@testable import Mars_Explorer
 
 extension XCTestCase {
 	func dataFromJson(for filename: String) -> Data {

@@ -13,6 +13,7 @@ class RoversCoordinator {
 	
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
+		navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
 	}
 	
 	func start() {
