@@ -65,4 +65,40 @@ class PhotoService {
 			failure(error)
 		}
 	}
+	
+	func retrievePhotos(for filter: Filter, success: @escaping ([Photo]) -> Void, failure: @escaping (Error) -> Void) {
+//		do {
+//			let url = try ServiceHelpers.secure(url: .photos(for: rover))
+//
+//			// Start the request
+//			let task = session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
+//				if let error = error {
+//					DispatchQueue.main.async {
+//						failure(error)
+//					}
+//				} else if let data = data {
+//					do {
+//						let result = try self.decoder.decode(PhotosResult.self, from: data)
+//						DispatchQueue.main.async {
+//							success(result.photos)
+//						}
+//					} catch {
+//						DispatchQueue.main.async {
+//							failure(error)
+//						}
+//					}
+//				} else {
+//					DispatchQueue.main.async {
+//						failure(NSError(
+//							domain: url.absoluteString,
+//							code: -1,
+//							userInfo: [NSLocalizedDescriptionKey: "No data returned from request."]))
+//					}
+//				}
+//			}
+//			task.resume()
+//		} catch {
+//			failure(error)
+//		}
+	}
 }

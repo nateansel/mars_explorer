@@ -15,4 +15,13 @@ class Photo: Decodable {
 	let earthDate: Date
 	let camera: Camera
 	let rover: Rover
+
+	init(id: Int, sol: Int, imgSrc: String, earthDate: Date, camera: Camera, rover: Rover) {
+		self.id = id
+		self.sol = sol
+		self.imgSrc = imgSrc
+		self.earthDate = earthDate
+		self.camera = camera
+		self.rover = rover
+	}
 }
