@@ -53,7 +53,7 @@ class RoverTableViewController: UITableViewController {
 				return cell
 			case 1:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "activityDateCell", for: indexPath) as! ActivityDateTableViewCell
-				cell.icon = nil
+				cell.icon = UIImage(named: "launch")
 				cell.date = rover?.launchDate
 				cell.title = "Launched"
 				return cell

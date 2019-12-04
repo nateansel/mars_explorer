@@ -13,5 +13,24 @@ extension URL {
 }
 
 enum ServiceHelpers {
-	static let apiKey = "LWukPEZ6yczfW735RfTbktxSukJeJ2f9oxmfQW13"
+	static private let apiKey = "LWukPEZ6yczfW735RfTbktxSukJeJ2f9oxmfQW13"
+	
+	static func secure(url: URL) throws -> URL {
+		guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
+			else {
+				throw NSError(
+					domain: url.absoluteString,
+					code: -1,
+					userInfo: [NSLocalizedDescriptionKey: "Unable to create URLComponents from URL: \(url.absoluteString)"])
+		}
+		components.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
+		guard let fullUrl = components.url
+			else {
+				throw NSError(
+					domain: url.absoluteString,
+					code: -1,
+					userInfo: [NSLocalizedDescriptionKey: "Unable to create URL from URLComponents: \(components)"])
+		}
+		return fullUrl
+	}
 }

@@ -45,7 +45,10 @@ class ActivityDateTableViewCell: UITableViewCell {
 		$0.textColor = .lightGray
 		return $0
 	}(UILabel())
-	private let iconImageView = UIImageView()
+	private let iconImageView: UIImageView = {
+		$0.tintColor = .systemGray
+		return $0
+	}(UIImageView())
 	
 	// MARK: - Methods
 	

@@ -1,18 +1,20 @@
 //
-//  RoverService.swift
+//  PhotoService.swift
 //  Mars Explorer
 //
 //  Created by Nathan Ansel on 12/3/19.
 //  Copyright © 2019 Nathan Ansel. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 fileprivate extension URL {
-	static let roverList = base.appendingPathComponent("rovers")
+	static func photos(for rover: Rover) -> URL {
+		return base.appendingPathComponent("rovers/\(rover.name)/photos")
+	}
 }
 
-class RoverService: RoversManager {
+class PhotoService {
 	
 	private let session = URLSession(configuration: .default)
 	private let decoder: JSONDecoder = {
@@ -24,13 +26,13 @@ class RoverService: RoversManager {
 		return $0
 	}(JSONDecoder())
 	
-	private struct RoversResult: Decodable {
-		let rovers: [Rover]
+	private struct PhotosResult: Decodable {
+		let photos: [Photo]
 	}
 	
-	func retrieveRovers(success: @escaping ([Rover]) -> Void, failure: @escaping (Error) -> Void) {
+	func retrievePhotos(for rover: Rover, success: @escaping ([Photo]) -> Void, failure: @escaping (Error) -> Void) {
 		do {
-			let url = try ServiceHelpers.secure(url: .roverList)
+			let url = try ServiceHelpers.secure(url: .photos(for: rover))
 			
 			// Start the request
 			let task = session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
@@ -40,9 +42,9 @@ class RoverService: RoversManager {
 					}
 				} else if let data = data {
 					do {
-						let result = try self.decoder.decode(RoversResult.self, from: data)
+						let result = try self.decoder.decode(PhotosResult.self, from: data)
 						DispatchQueue.main.async {
-							success(result.rovers)
+							success(result.photos)
 						}
 					} catch {
 						DispatchQueue.main.async {
@@ -52,7 +54,7 @@ class RoverService: RoversManager {
 				} else {
 					DispatchQueue.main.async {
 						failure(NSError(
-							domain: URL.roverList.absoluteString,
+							domain: url.absoluteString,
 							code: -1,
 							userInfo: [NSLocalizedDescriptionKey: "No data returned from request."]))
 					}
