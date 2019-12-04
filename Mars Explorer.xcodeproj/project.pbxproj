@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D840943223971409000027C1 /* UIViewController+Extensions.swift */; };
 		D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0A82395B265000C42B2 /* AppDelegate.swift */; };
 		D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */; };
 		D88FE0B22395B267000C42B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0B12395B267000C42B2 /* Assets.xcassets */; };
@@ -31,6 +32,8 @@
 		D88FE1462395C400000C42B2 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE1452395C400000C42B2 /* UIView+Extensions.swift */; };
 		D88FE1482395C9DF000C42B2 /* RoverStatusTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE1472395C9DF000C42B2 /* RoverStatusTableViewCell.swift */; };
 		D88FE14A2395CA51000C42B2 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE1492395CA51000C42B2 /* StatusView.swift */; };
+		D88FE14D23970811000C42B2 /* RoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE14C23970811000C42B2 /* RoverService.swift */; };
+		D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE14E23970868000C42B2 /* ServiceHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +47,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D840943223971409000027C1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D88FE0A52395B265000C42B2 /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FE0A82395B265000C42B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,6 +79,8 @@
 		D88FE1452395C400000C42B2 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		D88FE1472395C9DF000C42B2 /* RoverStatusTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverStatusTableViewCell.swift; sourceTree = "<group>"; };
 		D88FE1492395CA51000C42B2 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		D88FE14C23970811000C42B2 /* RoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverService.swift; sourceTree = "<group>"; };
+		D88FE14E23970868000C42B2 /* ServiceHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */,
 				D88FE0CE2395B335000C42B2 /* AppCoordinator.swift */,
 				D88FE0C12395B2F5000C42B2 /* RoversCoordinator.swift */,
+				D88FE14B239707FF000C42B2 /* Services */,
 				D88FE0C22395B2F5000C42B2 /* View Controllers */,
 				D88FE0C52395B2F5000C42B2 /* Cells */,
 				D88FE0BE2395B2F5000C42B2 /* Models */,
@@ -216,9 +223,19 @@
 			isa = PBXGroup;
 			children = (
 				D88FE1452395C400000C42B2 /* UIView+Extensions.swift */,
+				D840943223971409000027C1 /* UIViewController+Extensions.swift */,
 				D88FE1492395CA51000C42B2 /* StatusView.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		D88FE14B239707FF000C42B2 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D88FE14E23970868000C42B2 /* ServiceHelpers.swift */,
+				D88FE14C23970811000C42B2 /* RoverService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,13 +346,16 @@
 				D88FE1432395C2A1000C42B2 /* ActivityDateTableViewCell.swift in Sources */,
 				D88FE1412395BF52000C42B2 /* RoverTableViewController.swift in Sources */,
 				D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */,
+				D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */,
 				D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */,
+				D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */,
 				D88FE1462395C400000C42B2 /* UIView+Extensions.swift in Sources */,
 				D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */,
 				D88FE0CA2395B2F5000C42B2 /* RoversCoordinator.swift in Sources */,
 				D88FE0CD2395B2F5000C42B2 /* RoverTableViewCell.swift in Sources */,
 				D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */,
 				D88FE0CF2395B335000C42B2 /* AppCoordinator.swift in Sources */,
+				D88FE14D23970811000C42B2 /* RoverService.swift in Sources */,
 				D88FE0CC2395B2F5000C42B2 /* PicturesTableViewController.swift in Sources */,
 				D88FE1482395C9DF000C42B2 /* RoverStatusTableViewCell.swift in Sources */,
 				D88FE0CB2395B2F5000C42B2 /* RoversTableViewController.swift in Sources */,

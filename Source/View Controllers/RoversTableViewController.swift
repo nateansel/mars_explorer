@@ -12,11 +12,16 @@ protocol RoversTableViewControllerDelegate: class {
 	func display(rover: Rover)
 }
 
+protocol RoversManager: class {
+	func retrieveRovers(success: @escaping ([Rover]) -> Void, failure: @escaping (Error) -> Void)
+}
+
 class RoversTableViewController: UITableViewController {
 	
 	var data: [Rover] = []
 	
 	var delegate: RoversTableViewControllerDelegate?
+	var manager: RoversManager?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,9 +65,22 @@ class RoversTableViewController: UITableViewController {
 				])
 		]
 		
+		refreshData()
 		tableView.register(RoverTableViewCell.self, forCellReuseIdentifier: "roverCell")
 		tableView.reloadData()
     }
+	
+	func refreshData() {
+		manager?.retrieveRovers(success: { (rovers) in
+			self.data = rovers
+			self.tableView.reloadData()
+		}, failure: { (error) in
+			self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+				self.refreshData()
+			})
+			print(error)
+		})
+	}
 
     // MARK: - UITableViewDataSource
 

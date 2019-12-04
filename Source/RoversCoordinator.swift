@@ -20,6 +20,7 @@ class RoversCoordinator {
 	func start() {
 		let vc = RoversTableViewController()
 		vc.delegate = self
+		vc.manager = RoverService()
 		navigationController.pushViewController(vc, animated: false)
 	}
 }
