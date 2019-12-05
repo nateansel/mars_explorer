@@ -12,13 +12,16 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
 	let appCoor = AppCoordinator(tabBarController: UITabBarController())
+	let roverCoor = RoversCoordinator(navigationController: UINavigationController())
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		// Initalize the UIWindow and start the app
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(windowScene: windowScene)
-		window?.rootViewController = appCoor.tabBarController
-		appCoor.start()
+//		window?.rootViewController = appCoor.tabBarController
+//		appCoor.start()
+		window?.rootViewController = roverCoor.navigationController
+		roverCoor.start()
 		window?.makeKeyAndVisible()
 	}
 

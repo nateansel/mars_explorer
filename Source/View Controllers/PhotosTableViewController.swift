@@ -14,12 +14,16 @@ protocol PhotosTableViewControllerDelegate: class {
 
 class PhotosTableViewController: UITableViewController {
 	
-	var data: [Photo] = []
+	private var rawData: [Photo] = []
+	private var data: [PhotoGroup] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
-		data = [
+		title = "Photos"
+		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicCell")
+		
+		replaceData(with: [
 			Photo(
 				id: 8945,
 				sol: 2540,
@@ -45,16 +49,38 @@ class PhotosTableViewController: UITableViewController {
 							name: "NAVCAM",
 							fullName: "Navigation Camera")
 				]))
-		]
+		])
     }
+	
+	func replaceData(with photos: [Photo]) {
+		rawData = photos
+		data = .init(photos: photos)
+	}
+	
+	func appendData(with photos: [Photo]) {
+		rawData.append(contentsOf: photos)
+		data.append(photos: photos)
+	}
 
     // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return 0
+		return data.count
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0
+		return data[section].photos.count
     }
+	
+	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
+		cell.textLabel?.text = data[indexPath.section].photos[indexPath.row].rover.name
+		return cell
+	}
+	
+	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		let dateFormatter = DateFormatter()
+		dateFormatter.dateStyle = .short
+		return dateFormatter.string(from: data[section].date)
+	}
 }
