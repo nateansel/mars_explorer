@@ -26,6 +26,7 @@ class RoversTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 		title = "Rovers"
+		tableView.tableFooterView = UIView()
 		
 		// For testing
 		data = [

@@ -42,7 +42,7 @@ class ActivityDateTableViewCell: UITableViewCell {
 	private let titleLabel = UILabel()
 	private let dateLabel: UILabel = {
 		$0.textAlignment = .right
-		$0.textColor = .lightGray
+		$0.textColor = .systemGray
 		return $0
 	}(UILabel())
 	private let iconImageView: UIImageView = {

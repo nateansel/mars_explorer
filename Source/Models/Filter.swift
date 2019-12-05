@@ -16,4 +16,13 @@ class Filter {
 	var selectedCameras: [Camera]
 	var selectedSol: Int?
 	var selectedEarthDate: Date?
+
+	init(allRovers: [Rover], allCameras: [Camera], selectedRovers: [Rover], selectedCameras: [Camera], selectedSol: Int?, selectedEarthDate: Date?) {
+		self.allRovers = allRovers
+		self.allCameras = allCameras
+		self.selectedRovers = selectedRovers
+		self.selectedCameras = selectedCameras
+		self.selectedSol = selectedSol
+		self.selectedEarthDate = selectedEarthDate
+	}
 }

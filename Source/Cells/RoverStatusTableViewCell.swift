@@ -25,7 +25,7 @@ class RoverStatusTableViewCell: UITableViewCell {
 	private let statusView = StatusView()
 	private let statusLabel: UILabel = {
 		$0.textAlignment = .right
-		$0.textColor = .lightGray
+		$0.textColor = .systemGray
 		return $0
 	}(UILabel())
 	
