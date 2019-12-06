@@ -11,8 +11,9 @@ import Foundation
 class PhotoManifestDataSource {
 	let manifest: PhotoManifest
 	
-	var currentSol: Int { return manifest.photos[index].sol }
 	var currentPage: Int
+	var currentSol: Int { manifest.photos[index].sol }
+	var isAtEndOfList: Bool { index == manifest.photos.count }
 	
 	private var index: Int
 	

@@ -82,7 +82,9 @@ class PhotoDetailTableViewController: UITableViewController {
 				cell.detail = nil
 			}
 			return cell
-		default: preconditionFailure("Should never reach this point.")
+		default:
+			// This code should only be reached during development, as it causes a crash. This will never be reached in production.
+			preconditionFailure("Was unable to determine which cell to display for IndexPath \(indexPath)")
 		}
 	}
 	

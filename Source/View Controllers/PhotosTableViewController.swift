@@ -53,8 +53,11 @@ class PhotosTableViewController: UITableViewController {
 				success: { (photos) in
 					self.appendData(with: photos)
 					self.dataSource.advance()
+					if photos.count < 25 {
+						self.refreshData(byAppending: true)
+					}
 				}, failure: { (error) in
-					self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})
 			})
@@ -67,8 +70,11 @@ class PhotosTableViewController: UITableViewController {
 				success: { (photos) in
 					self.replaceData(with: photos)
 					self.dataSource.advance()
+					if photos.count < 25 {
+						self.refreshData(byAppending: true)
+					}
 				}, failure: { (error) in
-					self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})
 			})
@@ -83,7 +89,9 @@ class PhotosTableViewController: UITableViewController {
 	
 	func appendData(with photos: [Photo]) {
 		rawData.append(contentsOf: photos)
+		print(data)
 		let toInsert = data.append(photos: photos)
+		print(data)
 		tableView.beginUpdates()
 		tableView.insertRows(at: toInsert.rowsInserted, with: .top)
 		tableView.insertSections(IndexSet(toInsert.sectionsInserted), with: .top)
