@@ -17,7 +17,10 @@ class PhotoDetailTableViewController: UITableViewController {
 	}(DateFormatter())
 	
 	var photo: Photo?
-	
+	var photoData: PhotoData? {
+		guard let photo = photo else { return nil }
+		return PhotoDataContainer.shared.data(for: photo)
+	}
 	
 	convenience init() {
 		self.init(style: .insetGrouped)
@@ -36,6 +39,25 @@ class PhotoDetailTableViewController: UITableViewController {
 		title = "Photo"
 		tableView.register(PhotoSquareTableViewCell.self, forCellReuseIdentifier: "photoCell")
 		tableView.register(BasicInformationTableViewCell.self, forCellReuseIdentifier: "infoCell")
+		
+		if photoData == nil {
+			refreshData()
+		}
+	}
+	
+	func refreshData() {
+		guard let photo = photo else { return }
+		PhotoService.shared.retrievePhotoData(
+			for: photo,
+			success: { (data) in
+				PhotoDataContainer.shared.store(data)
+				self.tableView.reloadData()
+			}, failure: { (error) in
+				self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading this photo. Please try again.", retryAction: {
+					self.refreshData()
+				})
+				print(error)
+		})
 	}
 	
 	// MARK: - UITableViewDataSource
