@@ -10,16 +10,14 @@ import UIKit
 
 class PhotoDetailTableViewController: UITableViewController {
 	
+	private var isDisplayingCameraInfo = false
 	private var dateFormatter: DateFormatter = {
 		$0.dateStyle = .medium
 		return $0
 	}(DateFormatter())
 	
-	var photo: Photo? {
-		didSet {
-			
-		}
-	}
+	var photo: Photo?
+	
 	
 	convenience init() {
 		self.init(style: .insetGrouped)
@@ -49,7 +47,7 @@ class PhotoDetailTableViewController: UITableViewController {
 	override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 		switch section {
 		case 0: return 1
-		case 1: return 3
+		case 1: return isDisplayingCameraInfo ? 4 : 3
 		default: return 0
 		}
 	}
@@ -71,6 +69,13 @@ class PhotoDetailTableViewController: UITableViewController {
 				cell.title = "Camera"
 				cell.detail = photo?.camera.name
 			case 2:
+				if isDisplayingCameraInfo {
+					cell.title = nil
+					cell.detail = photo?.camera.fullName
+				} else {
+					fallthrough // goes to `case 3:`'s body
+				}
+			case 3:
 				cell.title = "Date"
 				if let date = photo?.earthDate {
 					cell.detail = dateFormatter.string(from: date)
@@ -101,6 +106,20 @@ class PhotoDetailTableViewController: UITableViewController {
 		switch section {
 		case 1: return "Info"
 		default: return nil
+		}
+	}
+	
+	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+		return indexPath.row == 1
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		tableView.deselectRow(at: indexPath, animated: true)
+		isDisplayingCameraInfo.toggle()
+		if isDisplayingCameraInfo {
+			tableView.insertRows(at: [IndexPath(row: 2, section: indexPath.section)], with: .top)
+		} else {
+			tableView.deleteRows(at: [IndexPath(row: 2, section: indexPath.section)], with: .top)
 		}
 	}
 }

@@ -30,6 +30,8 @@ class PhotoService {
 		return $0
 	}(JSONDecoder())
 	
+	static var shared = PhotoService()
+	
 	// MARK: - Methods
 	
 	private struct PhotosManifestResult: Decodable {

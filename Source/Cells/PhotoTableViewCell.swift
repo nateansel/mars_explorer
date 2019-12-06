@@ -25,7 +25,7 @@ class PhotoTableViewCell: UITableViewCell {
 				photoImageView.image = UIImage(data: data.data)
 			} else {
 				photoImageView.image = nil
-				PhotoService().retrievePhotoData(for: photo, success: { (data) in
+				PhotoService.shared.retrievePhotoData(for: photo, success: { (data) in
 					PhotoDataContainer.shared.store(data)
 					if self.photo?.id == data.photoID {
 						self.photoImageView.image = UIImage(data: data.data)
