@@ -9,18 +9,18 @@
 import Foundation
 
 class PhotoManifest: Decodable {
-	let photos: [PhotoSet]
+	let photoSets: [PhotoSet]
 	
 	init(photos: [PhotoSet]) {
-		self.photos = photos.sorted(by: { $0.sol > $1.sol })
+		self.photoSets = photos.sorted(by: { $0.sol > $1.sol })
 	}
 	
 	enum CodingKeys: String, CodingKey {
-		case photos
+		case photoSets = "photos"
 	}
 	
 	required init(from decoder: Decoder) throws {
 		let container = try decoder.container(keyedBy: CodingKeys.self)
-		self.photos = try container.decode([PhotoSet].self, forKey: .photos).sorted(by: { $0.sol > $1.sol })
+		self.photoSets = try container.decode([PhotoSet].self, forKey: .photoSets).sorted(by: { $0.sol > $1.sol })
 	}
 }

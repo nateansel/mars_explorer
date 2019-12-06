@@ -10,6 +10,7 @@ import XCTest
 @testable import Mars_Explorer
 
 class RoverTests: XCTestCase {
+	
 	var jsonData: Data = Data()
 	let decoder: JSONDecoder = {
 		$0.dateDecodingStrategy = .formatted({
@@ -20,7 +21,7 @@ class RoverTests: XCTestCase {
 		return $0
 	}(JSONDecoder())
 	
-	private let filename = "rover_sample"
+	private let fileName = "rover_sample"
 	
 	private let roverId = 5
 	private let roverName = "Curiosity"
@@ -32,9 +33,9 @@ class RoverTests: XCTestCase {
 	private let roverTotalPhotos = 366206
 	private let roverCamera1Name = "FHAZ"
 	
-	override class func setUp() {
+	override func setUp() {
 		super.setUp()
-//		jsonData = dataFromJson(for: filename)
+		jsonData = dataFromJson(for: fileName)
 	}
 	
 	func testDecodable() {
@@ -45,11 +46,11 @@ class RoverTests: XCTestCase {
 			XCTAssert(rover.landingDate == roverLandingDate, "The Rover.id property was not decoded properly. \(roverLandingDate) is the correct value, but the value decoded from the JSON was: \(rover.landingDate)")
 			XCTAssert(rover.launchDate == roverLaunchDate, "The Rover.id property was not decoded properly. \(roverLaunchDate) is the correct value, but the value decoded from the JSON was: \(rover.launchDate)")
 		} catch {
-//			XCTFail("""
-//				\(fileName).json was unable to be parsed by the initializer provided by conforming to the Decodable protocol. Check your implementation before continuing.
-//				Error:
-//					\(error)
-//				""")
+			XCTFail("""
+				\(fileName).json was unable to be parsed by the initializer provided by conforming to the Decodable protocol. Check your implementation before continuing.
+				Error:
+					\(error)
+				""")
 		}
 	}
 

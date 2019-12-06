@@ -12,8 +12,8 @@ class PhotoManifestDataSource {
 	let manifest: PhotoManifest
 	
 	var currentPage: Int
-	var currentSol: Int { manifest.photos[index].sol }
-	var isAtEndOfList: Bool { index == manifest.photos.count }
+	var currentSol: Int { manifest.photoSets[index].sol }
+	var isAtEndOfList: Bool { index == manifest.photoSets.count }
 	
 	private var index: Int
 	
@@ -24,7 +24,7 @@ class PhotoManifestDataSource {
 	}
 	
 	func advance() {
-		if currentPage < manifest.photos[index].totalPages {
+		if currentPage < manifest.photoSets[index].totalPages {
 			currentPage += 1
 		} else {
 			index += 1

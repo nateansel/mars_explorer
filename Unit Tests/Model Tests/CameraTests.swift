@@ -13,7 +13,10 @@ class CameraTests: XCTestCase {
 	
 	var jsonData: Data = Data()
 	let decoder: JSONDecoder = {
-		$0.dateDecodingStrategy = .millisecondsSince1970
+		$0.dateDecodingStrategy = .formatted({
+			$0.dateFormat = "yyyy-mm-dd"
+			return $0
+			}(DateFormatter()))
 		$0.keyDecodingStrategy = .convertFromSnakeCase
 		return $0
 	}(JSONDecoder())
@@ -24,19 +27,7 @@ class CameraTests: XCTestCase {
 	
     override func setUp() {
 		super.setUp()
-        guard let url = Bundle(for: Self.self).url(forResource: fileName, withExtension: "json")
-			else {
-				fatalError("\(fileName).json file was not found. Please ensure it is included in the Unit Tests build before proceeding.")
-		}
-		do {
-			jsonData = try Data(contentsOf: url)
-		} catch {
-			fatalError("""
-				\(fileName).json was unable to be coded into a Data object. Please check the file and continue.
-				Error:
-					\(error)
-				""")
-		}
+		jsonData = dataFromJson(for: fileName)
     }
 	
     override func tearDown() {
