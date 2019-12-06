@@ -14,4 +14,13 @@ class PhotoManifest: Decodable {
 	init(photos: [PhotoSet]) {
 		self.photos = photos.sorted(by: { $0.sol > $1.sol })
 	}
+	
+	enum CodingKeys: String, CodingKey {
+		case photos
+	}
+	
+	required init(from decoder: Decoder) throws {
+		let container = try decoder.container(keyedBy: CodingKeys.self)
+		self.photos = try container.decode([PhotoSet].self, forKey: .photos).sorted(by: { $0.sol > $1.sol })
+	}
 }

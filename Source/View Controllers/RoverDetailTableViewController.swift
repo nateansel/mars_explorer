@@ -38,6 +38,7 @@ class RoverDetailTableViewController: UITableViewController {
 		tableView.register(RoverStatusTableViewCell.self, forCellReuseIdentifier: "roverStatusCell")
 		tableView.register(ActivityDateTableViewCell.self, forCellReuseIdentifier: "activityDateCell")
 		tableView.register(CameraTableViewCell.self, forCellReuseIdentifier: "cameraCell")
+		tableView.register(BasicInformationTableViewCell.self, forCellReuseIdentifier: "infoCell")
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicCell")
 		tableView.reloadData()
     }
@@ -95,8 +96,9 @@ class RoverDetailTableViewController: UITableViewController {
 			cell.accessoryType = .disclosureIndicator
 			return cell
 		case 2:
-			let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
-			cell.textLabel?.text = "All Photos"
+			let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! BasicInformationTableViewCell
+			cell.title = "All Photos"
+			cell.detail = "\(rover?.totalPhotos ?? 0)"
 			cell.accessoryType = .disclosureIndicator
 			return cell
 		default:
