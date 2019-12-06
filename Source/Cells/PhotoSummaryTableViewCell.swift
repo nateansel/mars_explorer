@@ -12,16 +12,25 @@ class PhotoSummaryTableViewCell: UITableViewCell {
 	
 	// MARK: - Properties
 	
+	private let dateFormatter: DateFormatter = {
+		$0.dateStyle = .short
+		return $0
+	}(DateFormatter())
+	
 	/// The Photo to display.
 	var photo: Photo? {
 		didSet {
 			guard let photo = photo
 				else {
 					photoImageView.image = nil
-					titleLabel.text = nil
+					roverLabel.text = nil
+					cameraLabel.text = nil
+					dateLabel.text = nil
 					return
 			}
-			titleLabel.text = photo.rover.name
+			roverLabel.text = photo.rover.name
+			cameraLabel.text = photo.camera.name
+			dateLabel.text = dateFormatter.string(from: photo.earthDate)
 			if let data = PhotoDataContainer.shared.data(for: photo) {
 				photoImageView.image = UIImage(data: data.data)
 			} else {
@@ -47,7 +56,11 @@ class PhotoSummaryTableViewCell: UITableViewCell {
 		return $0
 	}(UIImageView())
 	
-	private let titleLabel: UILabel = {
+	private let roverLabel = UILabel()
+	private let cameraLabel = UILabel()
+	private let dateLabel: UILabel = {
+		$0.textAlignment = .right
+		$0.textColor = .systemGray
 		return $0
 	}(UILabel())
 	
@@ -64,7 +77,7 @@ class PhotoSummaryTableViewCell: UITableViewCell {
 	}
 	
 	private func commonInit() {
-		contentView.prepareViewsForConstraints([photoImageView, titleLabel])
+		contentView.prepareViewsForConstraints([photoImageView, roverLabel, cameraLabel, dateLabel])
 		
 		NSLayoutConstraint.activate([
 			photoImageView.topAnchor.constraint(greaterThanOrEqualTo: contentView.layoutMarginsGuide.topAnchor),
@@ -74,10 +87,20 @@ class PhotoSummaryTableViewCell: UITableViewCell {
 			photoImageView.widthAnchor.constraint(equalTo: photoImageView.heightAnchor),
 			photoImageView.widthAnchor.constraint(equalToConstant: 56),
 			
-			titleLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
-			titleLabel.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 8),
-			titleLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
-			titleLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor)
+			roverLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+			roverLabel.leadingAnchor.constraint(equalTo: photoImageView.trailingAnchor, constant: 8),
+			
+			cameraLabel.topAnchor.constraint(equalTo: roverLabel.bottomAnchor, constant: 8),
+			cameraLabel.leadingAnchor.constraint(equalTo: roverLabel.leadingAnchor),
+			cameraLabel.trailingAnchor.constraint(equalTo: roverLabel.trailingAnchor),
+			cameraLabel.bottomAnchor.constraint(equalTo: contentView.layoutMarginsGuide.bottomAnchor),
+			
+			dateLabel.topAnchor.constraint(equalTo: contentView.layoutMarginsGuide.topAnchor),
+			dateLabel.leadingAnchor.constraint(equalTo: roverLabel.trailingAnchor, constant: 8),
+			dateLabel.trailingAnchor.constraint(equalTo: contentView.layoutMarginsGuide.trailingAnchor),
+			dateLabel.bottomAnchor.constraint(lessThanOrEqualTo: contentView.layoutMarginsGuide.bottomAnchor)
 		])
+		
+		dateLabel.setContentHuggingPriority(.required, for: .horizontal)
 	}
 }
