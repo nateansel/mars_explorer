@@ -61,7 +61,6 @@ extension Array where Element: PhotoGroup {
 	mutating func append(photos: [Photo]) -> (rowsInserted: [IndexPath], sectionsInserted: [Int]) {
 		var rows: [Int] = []
 		let originalCount = count
-		let currentSection = count - 1
 		let otherPhotoGroups: [PhotoGroup] = .init(photos: photos)
 		if let firstDate = otherPhotoGroups.first?.date,
 			let lastDate = last?.date,

@@ -117,7 +117,6 @@ class PhotoService {
 				parameters["camera"] = camera.name
 			}
 			url = try ServiceHelpers.add(parameters: parameters, to: url)
-			print(url)
 			
 			// Start the request
 			let task = session.dataTask(with: URLRequest(url: url)) { (data, response, error) in
