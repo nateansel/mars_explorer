@@ -23,6 +23,7 @@ class PhotosTableViewController: UITableViewController {
 	private var rawData: [Photo] = []
 	private var data: [PhotoGroup] = []
 	private var dataSource: PhotoManifestDataSource!
+	private var isLoading = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +31,7 @@ class PhotosTableViewController: UITableViewController {
 		title = "Photos"
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicCell")
 		tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "photoCell")
+		tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: "loadingCell")
 		
 		guard let rover = rover else { return }
 		manager?.retrieveManifest(
@@ -43,6 +45,7 @@ class PhotosTableViewController: UITableViewController {
     }
 	
 	func refreshData(byAppending: Bool) {
+		isLoading = true
 		guard let rover = rover else { return }
 		if byAppending {
 			manager?.retrievePhotos(
@@ -53,6 +56,7 @@ class PhotosTableViewController: UITableViewController {
 				success: { (photos) in
 					self.appendData(with: photos)
 					self.dataSource.advance()
+					self.isLoading = false
 					if photos.count < 25 {
 						self.refreshData(byAppending: true)
 					}
@@ -70,6 +74,7 @@ class PhotosTableViewController: UITableViewController {
 				success: { (photos) in
 					self.replaceData(with: photos)
 					self.dataSource.advance()
+					self.isLoading = false
 					if photos.count < 25 {
 						self.refreshData(byAppending: true)
 					}
@@ -101,20 +106,25 @@ class PhotosTableViewController: UITableViewController {
     // MARK: - UITableViewDataSource
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-		return data.count
+		guard let dataSource = dataSource else { return data.count }
+		return dataSource.isAtEndOfList ? data.count : data.count + 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-		return data[section].photos.count
+		return section == data.count ? 1 : data[section].photos.count
     }
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+		if indexPath.section == data.count {
+			return tableView.dequeueReusableCell(withIdentifier: "loadingCell", for: indexPath)
+		}
 		let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
 		cell.photo = data[indexPath.section].photos[indexPath.row]
 		return cell
 	}
 	
 	override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+		guard section < data.count else { return nil }
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateStyle = .short
 		return dateFormatter.string(from: data[section].date)
@@ -122,5 +132,13 @@ class PhotosTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		delegate?.display(photo: data[indexPath.section].photos[indexPath.row])
+	}
+	
+	override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+		if indexPath.section == data.count {
+			if !isLoading {
+				refreshData(byAppending: true)
+			}
+		}
 	}
 }

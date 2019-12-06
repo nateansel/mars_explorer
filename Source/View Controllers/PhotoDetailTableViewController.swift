@@ -62,7 +62,7 @@ class PhotoDetailTableViewController: UITableViewController {
 			cell.photoImage = UIImage(data: data.data)
 			return cell
 		case 1:
-			let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell") as! BasicInformationTableViewCell
+			let cell = tableView.dequeueReusableCell(withIdentifier: "infoCell", for: indexPath) as! BasicInformationTableViewCell
 			switch indexPath.row {
 			case 0:
 				cell.title = "Rover"

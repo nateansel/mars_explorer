@@ -43,6 +43,7 @@
 		D88FE14A2395CA51000C42B2 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE1492395CA51000C42B2 /* StatusView.swift */; };
 		D88FE14D23970811000C42B2 /* RoverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE14C23970811000C42B2 /* RoverService.swift */; };
 		D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE14E23970868000C42B2 /* ServiceHelpers.swift */; };
+		D8AFF1D1239A00EE00529BB6 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */; };
 		D8F109FF2398485400F14FA6 /* CameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */; };
 		D8F10A012398B2DB00F14FA6 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */; };
 		D8F10A032398B3C300F14FA6 /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F10A022398B3C300F14FA6 /* PhotoGroup.swift */; };
@@ -102,6 +103,7 @@
 		D88FE1492395CA51000C42B2 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
 		D88FE14C23970811000C42B2 /* RoverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverService.swift; sourceTree = "<group>"; };
 		D88FE14E23970868000C42B2 /* ServiceHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelpers.swift; sourceTree = "<group>"; };
+		D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewCell.swift; sourceTree = "<group>"; };
 		D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		D8F10A022398B3C300F14FA6 /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */,
 				D821F6EA2399EB4C00D23E77 /* PhotoSquareTableViewController.swift */,
 				D821F6EC2399F3F500D23E77 /* BasicInformationTableViewCell.swift */,
+				D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -399,6 +402,7 @@
 				D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */,
 				D8409437239735DA000027C1 /* Photo.swift in Sources */,
 				D821F6DF2399A3A800D23E77 /* PhotoDataContainer.swift in Sources */,
+				D8AFF1D1239A00EE00529BB6 /* LoadingTableViewCell.swift in Sources */,
 				D821F6E72399D15700D23E77 /* PhotoManifestDataSource.swift in Sources */,
 				D88FE14D23970811000C42B2 /* RoverService.swift in Sources */,
 				D88FE0CC2395B2F5000C42B2 /* PhotosTableViewController.swift in Sources */,
