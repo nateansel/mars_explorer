@@ -55,7 +55,6 @@ class PhotoSummaryTableViewCell: UITableViewCell {
 		$0.layer.masksToBounds = true
 		return $0
 	}(UIImageView())
-	
 	private let roverLabel = UILabel()
 	private let cameraLabel = UILabel()
 	private let dateLabel: UILabel = {

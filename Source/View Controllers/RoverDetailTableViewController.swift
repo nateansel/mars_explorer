@@ -19,6 +19,8 @@ protocol RoverDetailTableViewControllerDelegate: class {
 
 class RoverDetailTableViewController: UITableViewController {
 	
+	// MARK: - Properties
+	
 	/// The rover to display.
 	var rover: Rover?
 	
@@ -27,6 +29,8 @@ class RoverDetailTableViewController: UITableViewController {
 	
 	/// If this screen is currently displaying the list of cameras.
 	private var isDisplayingCameras = false
+	
+	// MARK: - Methods
 	
 	convenience init() {
 		self.init(style: .insetGrouped)
@@ -87,7 +91,7 @@ class RoverDetailTableViewController: UITableViewController {
 				return cell
 			case 2:
 				let cell = tableView.dequeueReusableCell(withIdentifier: "activityDateCell", for: indexPath) as! ActivityDateTableViewCell
-				cell.icon = nil
+				cell.icon = UIImage(named: "landed")
 				cell.date = rover?.landingDate
 				cell.title = "Landed"
 				return cell
