@@ -17,6 +17,7 @@ class PhotosTableViewController: UITableViewController {
 	var rover: Rover?
 	var camera: Camera?
 	
+	var delegate: PhotosTableViewControllerDelegate?
 	var manager: PhotoService?
 	
 	private var rawData: [Photo] = []
@@ -109,5 +110,9 @@ class PhotosTableViewController: UITableViewController {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateStyle = .short
 		return dateFormatter.string(from: data[section].date)
+	}
+	
+	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+		delegate?.display(photo: data[indexPath.section].photos[indexPath.row])
 	}
 }

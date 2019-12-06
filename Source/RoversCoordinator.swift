@@ -39,9 +39,18 @@ extension RoversCoordinator: RoversTableViewControllerDelegate {
 extension RoversCoordinator: RoverDetailTableViewControllerDelegate {
 	func displayPhotos(for rover: Rover, and camera: Camera?) {
 		let vc = PhotosTableViewController()
+		vc.delegate = self
 		vc.manager = PhotoService()
 		vc.rover = rover
 		vc.camera = camera
+		navigationController.pushViewController(vc, animated: true)
+	}
+}
+
+extension RoversCoordinator: PhotosTableViewControllerDelegate {
+	func display(photo: Photo) {
+		let vc = PhotoDetailTableViewController()
+		vc.photo = photo
 		navigationController.pushViewController(vc, animated: true)
 	}
 }

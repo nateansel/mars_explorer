@@ -13,6 +13,8 @@
 		D821F6E52399CE2B00D23E77 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E42399CE2B00D23E77 /* PhotoSet.swift */; };
 		D821F6E72399D15700D23E77 /* PhotoManifestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E62399D15700D23E77 /* PhotoManifestDataSource.swift */; };
 		D821F6E92399D96B00D23E77 /* PhotoDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E82399D96B00D23E77 /* PhotoDetailTableViewController.swift */; };
+		D821F6EB2399EB4C00D23E77 /* PhotoSquareTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6EA2399EB4C00D23E77 /* PhotoSquareTableViewController.swift */; };
+		D821F6ED2399F3F500D23E77 /* BasicInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6EC2399F3F500D23E77 /* BasicInformationTableViewCell.swift */; };
 		D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D840943223971409000027C1 /* UIViewController+Extensions.swift */; };
 		D8409435239731FC000027C1 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409434239731FC000027C1 /* PhotoService.swift */; };
 		D8409437239735DA000027C1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409436239735DA000027C1 /* Photo.swift */; };
@@ -63,6 +65,8 @@
 		D821F6E42399CE2B00D23E77 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
 		D821F6E62399D15700D23E77 /* PhotoManifestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManifestDataSource.swift; sourceTree = "<group>"; };
 		D821F6E82399D96B00D23E77 /* PhotoDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDetailTableViewController.swift; sourceTree = "<group>"; };
+		D821F6EA2399EB4C00D23E77 /* PhotoSquareTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSquareTableViewController.swift; sourceTree = "<group>"; };
+		D821F6EC2399F3F500D23E77 /* BasicInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicInformationTableViewCell.swift; sourceTree = "<group>"; };
 		D840943223971409000027C1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D8409434239731FC000027C1 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		D8409436239735DA000027C1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -200,6 +204,8 @@
 				D88FE1472395C9DF000C42B2 /* RoverStatusTableViewCell.swift */,
 				D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */,
 				D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */,
+				D821F6EA2399EB4C00D23E77 /* PhotoSquareTableViewController.swift */,
+				D821F6EC2399F3F500D23E77 /* BasicInformationTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -376,12 +382,14 @@
 				D8409435239731FC000027C1 /* PhotoService.swift in Sources */,
 				D88FE1432395C2A1000C42B2 /* ActivityDateTableViewCell.swift in Sources */,
 				D88FE1412395BF52000C42B2 /* RoverDetailTableViewController.swift in Sources */,
+				D821F6ED2399F3F500D23E77 /* BasicInformationTableViewCell.swift in Sources */,
 				D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */,
 				D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */,
 				D821F6E12399A3BE00D23E77 /* PhotoData.swift in Sources */,
 				D8F10A032398B3C300F14FA6 /* PhotoGroup.swift in Sources */,
 				D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */,
 				D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */,
+				D821F6EB2399EB4C00D23E77 /* PhotoSquareTableViewController.swift in Sources */,
 				D88FE1462395C400000C42B2 /* UIView+Extensions.swift in Sources */,
 				D8F109FF2398485400F14FA6 /* CameraTableViewCell.swift in Sources */,
 				D8F10A012398B2DB00F14FA6 /* PhotoTableViewCell.swift in Sources */,
