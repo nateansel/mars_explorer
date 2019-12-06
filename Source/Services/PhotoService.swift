@@ -32,7 +32,7 @@ class PhotoService {
 	private let session = URLSession(configuration: .default)
 	private let decoder: JSONDecoder = {
 		$0.dateDecodingStrategy = .formatted({
-			$0.dateFormat = "yyyy-mm-dd"
+			$0.dateFormat = "yyyy-MM-dd"
 			return $0
 			}(DateFormatter()))
 		$0.keyDecodingStrategy = .convertFromSnakeCase
