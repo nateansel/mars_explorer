@@ -1,5 +1,5 @@
 //
-//  RoverTableViewController.swift
+//  RoverDetailTableViewController.swift
 //  Mars Explorer
 //
 //  Created by Nathan Ansel on 12/2/19.
@@ -8,15 +8,15 @@
 
 import UIKit
 
-protocol RoverTableViewControllerDelegate: class {
+protocol RoverDetailTableViewControllerDelegate: class {
 	func displayPhotos(for rover: Rover, and camera: Camera?)
 }
 
-class RoverTableViewController: UITableViewController {
+class RoverDetailTableViewController: UITableViewController {
 	
 	var rover: Rover?
 	
-	var delegate: RoverTableViewControllerDelegate?
+	var delegate: RoverDetailTableViewControllerDelegate?
 	var isDisplayingCameras = false
 	
 	convenience init() {

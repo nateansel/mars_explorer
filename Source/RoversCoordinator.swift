@@ -29,14 +29,14 @@ class RoversCoordinator {
 
 extension RoversCoordinator: RoversTableViewControllerDelegate {
 	func display(rover: Rover) {
-		let vc = RoverTableViewController()
+		let vc = RoverDetailTableViewController()
 		vc.rover = rover
 		vc.delegate = self
 		navigationController.pushViewController(vc, animated: true)
 	}
 }
 
-extension RoversCoordinator: RoverTableViewControllerDelegate {
+extension RoversCoordinator: RoverDetailTableViewControllerDelegate {
 	func displayPhotos(for rover: Rover, and camera: Camera?) {
 		let vc = PhotosTableViewController()
 		vc.manager = PhotoService()
