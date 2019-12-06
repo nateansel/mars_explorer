@@ -1,5 +1,5 @@
 //
-//  PhotoTableViewCell.swift
+//  PhotoSummaryTableViewCell.swift
 //  Mars Explorer
 //
 //  Created by Nathan Ansel on 12/4/19.
@@ -8,10 +8,11 @@
 
 import UIKit
 
-class PhotoTableViewCell: UITableViewCell {
+class PhotoSummaryTableViewCell: UITableViewCell {
 	
 	// MARK: - Properties
 	
+	/// The Photo to display.
 	var photo: Photo? {
 		didSet {
 			guard let photo = photo

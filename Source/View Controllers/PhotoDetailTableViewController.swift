@@ -10,14 +10,20 @@ import UIKit
 
 class PhotoDetailTableViewController: UITableViewController {
 	
+	/// If the camera's additional information is being displayed.
 	private var isDisplayingCameraInfo = false
+	
+	/// The date formatter for this screen.
 	private var dateFormatter: DateFormatter = {
 		$0.dateStyle = .medium
 		return $0
 	}(DateFormatter())
 	
+	/// The photo being displayed.
 	var photo: Photo?
-	var photoData: PhotoData? {
+	
+	/// A helper variable to quickly find the image data for this photo.
+	private var photoData: PhotoData? {
 		guard let photo = photo else { return nil }
 		return PhotoDataContainer.shared.data(for: photo)
 	}
@@ -40,11 +46,13 @@ class PhotoDetailTableViewController: UITableViewController {
 		tableView.register(PhotoSquareTableViewCell.self, forCellReuseIdentifier: "photoCell")
 		tableView.register(BasicInformationTableViewCell.self, forCellReuseIdentifier: "infoCell")
 		
+		// Download the image data if it is not found in the cache.
 		if photoData == nil {
 			refreshData()
 		}
 	}
 	
+	/// Refreshes the image data for the photo being displayed on this screen.
 	func refreshData() {
 		guard let photo = photo else { return }
 		PhotoService.shared.retrievePhotoData(
@@ -130,6 +138,8 @@ class PhotoDetailTableViewController: UITableViewController {
 		default: return nil
 		}
 	}
+	
+	// MARK: - UITableViewDelegate
 	
 	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
 		return indexPath.row == 1

@@ -10,7 +10,11 @@ import UIKit
 
 class LoadingTableViewCell: UITableViewCell {
 	
-	private let loadingView = UIActivityIndicatorView()
+	// MARK: Views
+	
+	private let loadingView = UIActivityIndicatorView(style: .large)
+	
+	// MARK: - Methods
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -8,16 +8,25 @@
 
 import UIKit
 
+/// The delegate for the Rover Detail screen. Contains the navigation methods needed for this screen.
 protocol RoverDetailTableViewControllerDelegate: class {
+	/// Informs the delegate that a list of photos should be displayed for the given rover and camera.
+	///
+	/// - parameter rover: The rover for which photos should be displayed.
+	/// - parameter camera: The optional camera for which photos should be displayed.
 	func displayPhotos(for rover: Rover, and camera: Camera?)
 }
 
 class RoverDetailTableViewController: UITableViewController {
 	
+	/// The rover to display.
 	var rover: Rover?
 	
+	/// The navigation delegate.
 	var delegate: RoverDetailTableViewControllerDelegate?
-	var isDisplayingCameras = false
+	
+	/// If this screen is currently displaying the list of cameras.
+	private var isDisplayingCameras = false
 	
 	convenience init() {
 		self.init(style: .insetGrouped)

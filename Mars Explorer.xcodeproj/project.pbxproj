@@ -47,7 +47,7 @@
 		D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE14E23970868000C42B2 /* ServiceHelpers.swift */; };
 		D8AFF1D1239A00EE00529BB6 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */; };
 		D8F109FF2398485400F14FA6 /* CameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */; };
-		D8F10A012398B2DB00F14FA6 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */; };
+		D8F10A012398B2DB00F14FA6 /* PhotoSummaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F10A002398B2DB00F14FA6 /* PhotoSummaryTableViewCell.swift */; };
 		D8F10A032398B3C300F14FA6 /* PhotoGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8F10A022398B3C300F14FA6 /* PhotoGroup.swift */; };
 /* End PBXBuildFile section */
 
@@ -109,7 +109,7 @@
 		D88FE14E23970868000C42B2 /* ServiceHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceHelpers.swift; sourceTree = "<group>"; };
 		D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
 		D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewCell.swift; sourceTree = "<group>"; };
-		D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		D8F10A002398B2DB00F14FA6 /* PhotoSummaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSummaryTableViewCell.swift; sourceTree = "<group>"; };
 		D8F10A022398B3C300F14FA6 /* PhotoGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,7 +209,7 @@
 				D88FE1422395C2A1000C42B2 /* ActivityDateTableViewCell.swift */,
 				D88FE1472395C9DF000C42B2 /* RoverStatusTableViewCell.swift */,
 				D8F109FE2398485400F14FA6 /* CameraTableViewCell.swift */,
-				D8F10A002398B2DB00F14FA6 /* PhotoTableViewCell.swift */,
+				D8F10A002398B2DB00F14FA6 /* PhotoSummaryTableViewCell.swift */,
 				D821F6EA2399EB4C00D23E77 /* PhotoSquareTableViewController.swift */,
 				D821F6EC2399F3F500D23E77 /* BasicInformationTableViewCell.swift */,
 				D8AFF1D0239A00EE00529BB6 /* LoadingTableViewCell.swift */,
@@ -401,7 +401,7 @@
 				D821F6EB2399EB4C00D23E77 /* PhotoSquareTableViewController.swift in Sources */,
 				D88FE1462395C400000C42B2 /* UIView+Extensions.swift in Sources */,
 				D8F109FF2398485400F14FA6 /* CameraTableViewCell.swift in Sources */,
-				D8F10A012398B2DB00F14FA6 /* PhotoTableViewCell.swift in Sources */,
+				D8F10A012398B2DB00F14FA6 /* PhotoSummaryTableViewCell.swift in Sources */,
 				D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */,
 				D88FE0CA2395B2F5000C42B2 /* AppCoordinator.swift in Sources */,
 				D88FE0CD2395B2F5000C42B2 /* RoverTableViewCell.swift in Sources */,

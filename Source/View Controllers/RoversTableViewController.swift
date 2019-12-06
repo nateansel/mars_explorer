@@ -8,7 +8,11 @@
 
 import UIKit
 
+/// The delegate for the Rover List screen. Contains the navigation methods needed for this screen.
 protocol RoversTableViewControllerDelegate: class {
+	/// Informs the delegate that the details of the given rover should be displayed.
+	///
+	/// - parameter rover: The rover to display.
 	func display(rover: Rover)
 }
 

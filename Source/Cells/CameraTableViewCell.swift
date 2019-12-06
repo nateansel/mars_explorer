@@ -10,22 +10,28 @@ import UIKit
 
 class CameraTableViewCell: UITableViewCell {
 	
-	private let titleLabel: UILabel = {
-		$0.numberOfLines = 0
-		return $0
-	}(UILabel())
+	// MARK: - Properties
 	
-	private let photoCountLabel: UILabel = {
-		$0.textColor = .systemGray
-		return $0
-	}(UILabel())
-	
+	/// The camera to display.
 	var camera: Camera? {
 		didSet {
 			titleLabel.text = camera?.fullName
 			photoCountLabel.text = nil
 		}
 	}
+	
+	// MARK: Views
+	
+	private let titleLabel: UILabel = {
+		$0.numberOfLines = 0
+		return $0
+	}(UILabel())
+	private let photoCountLabel: UILabel = {
+		$0.textColor = .systemGray
+		return $0
+	}(UILabel())
+	
+	// MARK: - Methods
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

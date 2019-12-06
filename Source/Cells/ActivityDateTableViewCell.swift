@@ -17,11 +17,13 @@ class ActivityDateTableViewCell: UITableViewCell {
 	
 	// MARK: - Properties
 	
+	/// The title displayed on the left side of this cell.
 	var title: String? {
 		set { titleLabel.text = newValue }
 		get { titleLabel.text }
 	}
 	
+	/// The date displayed on the right side of this cell.
 	var date: Date? {
 		didSet {
 			if let date = date {
@@ -32,6 +34,7 @@ class ActivityDateTableViewCell: UITableViewCell {
 		}
 	}
 	
+	/// The icon displayed beside the title.
 	var icon: UIImage? {
 		set { iconImageView.image = newValue }
 		get { iconImageView.image }

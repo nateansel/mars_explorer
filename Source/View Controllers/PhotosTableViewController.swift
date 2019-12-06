@@ -8,7 +8,11 @@
 
 import UIKit
 
+/// The delegate for the Photo List screen. Contains the navigation methods needed for this screen.
 protocol PhotosTableViewControllerDelegate: class {
+	/// Informs the delegate that the given photo should be displayed.
+	///
+	/// - parameter photo: The photo to be displayed.
 	func display(photo: Photo)
 }
 
@@ -44,7 +48,7 @@ class PhotosTableViewController: UITableViewController {
         super.viewDidLoad()
 		
 		title = "Photos"
-		tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "photoCell")
+		tableView.register(PhotoSummaryTableViewCell.self, forCellReuseIdentifier: "photoCell")
 		tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: "loadingCell")
 		
 		// Retrieve the manifest for this rover and start loading photos.
@@ -146,7 +150,7 @@ class PhotosTableViewController: UITableViewController {
 		if indexPath.section == data.count {
 			return tableView.dequeueReusableCell(withIdentifier: "loadingCell", for: indexPath)
 		}
-		let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
+		let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoSummaryTableViewCell
 		cell.photo = data[indexPath.section].photos[indexPath.row]
 		return cell
 	}

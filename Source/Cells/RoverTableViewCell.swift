@@ -12,6 +12,7 @@ class RoverTableViewCell: UITableViewCell {
 	
 	// MARK: - Properties
 	
+	/// The rover being displayed.
 	var rover: Rover? {
 		didSet {
 			titleLabel.text = rover?.name

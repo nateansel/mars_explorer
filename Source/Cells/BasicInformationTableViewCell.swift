@@ -10,6 +10,20 @@ import UIKit
 
 class BasicInformationTableViewCell: UITableViewCell {
 	
+	// MARK: - Properties
+	
+	var title: String? {
+		set { titleLabel.text = newValue }
+		get { titleLabel.text }
+	}
+	
+	var detail: String? {
+		set { detailLabel.text = newValue }
+		get { detailLabel.text }
+	}
+	
+	// MARK: Views
+	
 	private let titleLabel: UILabel = {
 		$0.numberOfLines = 0
 		return $0
@@ -21,15 +35,7 @@ class BasicInformationTableViewCell: UITableViewCell {
 		return $0
 	}(UILabel())
 	
-	var title: String? {
-		set { titleLabel.text = newValue }
-		get { titleLabel.text }
-	}
-	
-	var detail: String? {
-		set { detailLabel.text = newValue }
-		get { detailLabel.text }
-	}
+	// MARK: - Methods
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)

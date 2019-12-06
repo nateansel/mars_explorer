@@ -10,15 +10,21 @@ import UIKit
 
 class PhotoSquareTableViewCell: UITableViewCell {
 	
-	private let photoImageView: UIImageView = {
-		$0.contentMode = .scaleToFill
-		return $0
-	}(UIImageView())
+	// MARK: - Properties
 	
 	var photoImage: UIImage? {
 		set { photoImageView.image = newValue }
 		get { photoImageView.image }
 	}
+	
+	// MARK: Views
+	
+	private let photoImageView: UIImageView = {
+		$0.contentMode = .scaleToFill
+		return $0
+	}(UIImageView())
+	
+	// MARK: - Init
 	
 	override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
 		super.init(style: style, reuseIdentifier: reuseIdentifier)
