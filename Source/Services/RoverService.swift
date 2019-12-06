@@ -52,7 +52,7 @@ class RoverService: RoversManager {
 				} else {
 					DispatchQueue.main.async {
 						failure(NSError(
-							domain: URL.roverList.absoluteString,
+							domain: url.absoluteString,
 							code: -1,
 							userInfo: [NSLocalizedDescriptionKey: "No data returned from request."]))
 					}

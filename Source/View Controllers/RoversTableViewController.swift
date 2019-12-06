@@ -27,48 +27,8 @@ class RoversTableViewController: UITableViewController {
         super.viewDidLoad()
 		title = "Rovers"
 		tableView.tableFooterView = UIView()
-		
-		// For testing
-		data = [
-			Rover(
-				id: 5,
-				name: "Curiosity",
-				landingDate: Calendar.current.date(from: DateComponents(year: 2012, month: 8, day: 6))!,
-				launchDate: Calendar.current.date(from: DateComponents(year: 2011, month: 11, day: 26))!,
-				status: .active,
-				maxSol: 2540,
-				maxDate: Calendar.current.date(from: DateComponents(year: 2019, month: 9, day: 28))!,
-				totalPhotos: 366206,
-				cameras: [
-					Camera(
-						name: "FHAZ",
-						fullName: "Front Hazard Avoidance Camera"),
-					Camera(
-						name: "NAVCAM",
-						fullName: "Navigation Camera")
-			]),
-			Rover(
-				id: 7,
-				name: "Spirit",
-				landingDate: Calendar.current.date(from: DateComponents(year: 2004, month: 1, day: 4))!,
-				launchDate: Calendar.current.date(from: DateComponents(year: 2003, month: 6, day: 10))!,
-				status: .complete,
-				maxSol: 2208,
-				maxDate: Calendar.current.date(from: DateComponents(year: 2010, month: 3, day: 21))!,
-				totalPhotos: 124550,
-				cameras: [
-						Camera(
-							name: "FHAZ",
-							fullName: "Front Hazard Avoidance Camera"),
-						Camera(
-							name: "NAVCAM",
-							fullName: "Navigation Camera")
-				])
-		]
-		
-		refreshData()
 		tableView.register(RoverTableViewCell.self, forCellReuseIdentifier: "roverCell")
-		tableView.reloadData()
+		refreshData()
     }
 	
 	func refreshData() {

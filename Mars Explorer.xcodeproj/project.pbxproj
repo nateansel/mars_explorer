@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D821F6DF2399A3A800D23E77 /* PhotoDataContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6DE2399A3A800D23E77 /* PhotoDataContainer.swift */; };
+		D821F6E12399A3BE00D23E77 /* PhotoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E02399A3BE00D23E77 /* PhotoData.swift */; };
+		D821F6E32399CCC200D23E77 /* PhotoManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E22399CCC200D23E77 /* PhotoManifest.swift */; };
+		D821F6E52399CE2B00D23E77 /* PhotoSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E42399CE2B00D23E77 /* PhotoSet.swift */; };
+		D821F6E72399D15700D23E77 /* PhotoManifestDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821F6E62399D15700D23E77 /* PhotoManifestDataSource.swift */; };
 		D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D840943223971409000027C1 /* UIViewController+Extensions.swift */; };
 		D8409435239731FC000027C1 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409434239731FC000027C1 /* PhotoService.swift */; };
 		D8409437239735DA000027C1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409436239735DA000027C1 /* Photo.swift */; };
@@ -53,6 +58,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D821F6DE2399A3A800D23E77 /* PhotoDataContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoDataContainer.swift; sourceTree = "<group>"; };
+		D821F6E02399A3BE00D23E77 /* PhotoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoData.swift; sourceTree = "<group>"; };
+		D821F6E22399CCC200D23E77 /* PhotoManifest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManifest.swift; sourceTree = "<group>"; };
+		D821F6E42399CE2B00D23E77 /* PhotoSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoSet.swift; sourceTree = "<group>"; };
+		D821F6E62399D15700D23E77 /* PhotoManifestDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoManifestDataSource.swift; sourceTree = "<group>"; };
 		D840943223971409000027C1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D8409434239731FC000027C1 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		D8409436239735DA000027C1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
@@ -164,9 +174,12 @@
 			isa = PBXGroup;
 			children = (
 				D88FE0BF2395B2F5000C42B2 /* Rover.swift */,
+				D821F6E22399CCC200D23E77 /* PhotoManifest.swift */,
+				D821F6E42399CE2B00D23E77 /* PhotoSet.swift */,
 				D88FE0C02395B2F5000C42B2 /* Camera.swift */,
 				D8409436239735DA000027C1 /* Photo.swift */,
 				D8F10A022398B3C300F14FA6 /* PhotoGroup.swift */,
+				D821F6E02399A3BE00D23E77 /* PhotoData.swift */,
 				D840943823975548000027C1 /* Filter.swift */,
 			);
 			path = Models;
@@ -178,6 +191,7 @@
 				D88FE0C32395B2F5000C42B2 /* RoversTableViewController.swift */,
 				D88FE1402395BF52000C42B2 /* RoverTableViewController.swift */,
 				D88FE0C42395B2F5000C42B2 /* PhotosTableViewController.swift */,
+				D821F6E62399D15700D23E77 /* PhotoManifestDataSource.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -242,6 +256,7 @@
 				D88FE1452395C400000C42B2 /* UIView+Extensions.swift */,
 				D840943223971409000027C1 /* UIViewController+Extensions.swift */,
 				D88FE1492395CA51000C42B2 /* StatusView.swift */,
+				D821F6DE2399A3A800D23E77 /* PhotoDataContainer.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -367,6 +382,7 @@
 				D88FE1412395BF52000C42B2 /* RoverTableViewController.swift in Sources */,
 				D88FE0C82395B2F5000C42B2 /* Rover.swift in Sources */,
 				D88FE14F23970868000C42B2 /* ServiceHelpers.swift in Sources */,
+				D821F6E12399A3BE00D23E77 /* PhotoData.swift in Sources */,
 				D8F10A032398B3C300F14FA6 /* PhotoGroup.swift in Sources */,
 				D88FE0C92395B2F5000C42B2 /* Camera.swift in Sources */,
 				D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */,
@@ -379,8 +395,12 @@
 				D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */,
 				D8409437239735DA000027C1 /* Photo.swift in Sources */,
 				D88FE0CF2395B335000C42B2 /* AppCoordinator.swift in Sources */,
+				D821F6DF2399A3A800D23E77 /* PhotoDataContainer.swift in Sources */,
+				D821F6E72399D15700D23E77 /* PhotoManifestDataSource.swift in Sources */,
 				D88FE14D23970811000C42B2 /* RoverService.swift in Sources */,
 				D88FE0CC2395B2F5000C42B2 /* PhotosTableViewController.swift in Sources */,
+				D821F6E52399CE2B00D23E77 /* PhotoSet.swift in Sources */,
+				D821F6E32399CCC200D23E77 /* PhotoManifest.swift in Sources */,
 				D88FE1482395C9DF000C42B2 /* RoverStatusTableViewCell.swift in Sources */,
 				D88FE0CB2395B2F5000C42B2 /* RoversTableViewController.swift in Sources */,
 				D88FE14A2395CA51000C42B2 /* StatusView.swift in Sources */,

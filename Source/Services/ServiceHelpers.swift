@@ -15,7 +15,15 @@ extension URL {
 enum ServiceHelpers {
 	static private let apiKey = "LWukPEZ6yczfW735RfTbktxSukJeJ2f9oxmfQW13"
 	
+	/// Secures the given url by adding the api key to the url as a url parameter.
+	///
+	/// - parameter url: The url to be secured
+	///
 	static func secure(url: URL) throws -> URL {
+		return try add(parameters: ["api_key": apiKey], to: url)
+	}
+	
+	static func add(parameters: [String: String], to url: URL) throws -> URL {
 		guard var components = URLComponents(url: url, resolvingAgainstBaseURL: false)
 			else {
 				throw NSError(
@@ -23,7 +31,12 @@ enum ServiceHelpers {
 					code: -1,
 					userInfo: [NSLocalizedDescriptionKey: "Unable to create URLComponents from URL: \(url.absoluteString)"])
 		}
-		components.queryItems = [URLQueryItem(name: "api_key", value: apiKey)]
+		if components.queryItems == nil {
+			components.queryItems = []
+		}
+		for key in parameters.keys {
+			components.queryItems?.append(URLQueryItem(name: key, value: parameters[key]))
+		}
 		guard let fullUrl = components.url
 			else {
 				throw NSError(

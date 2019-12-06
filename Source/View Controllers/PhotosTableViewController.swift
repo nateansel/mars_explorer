@@ -14,52 +14,79 @@ protocol PhotosTableViewControllerDelegate: class {
 
 class PhotosTableViewController: UITableViewController {
 	
+	var rover: Rover?
+	var camera: Camera?
+	
+	var manager: PhotoService?
+	
 	private var rawData: [Photo] = []
 	private var data: [PhotoGroup] = []
+	private var dataSource: PhotoManifestDataSource!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		title = "Photos"
 		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicCell")
+		tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "photoCell")
 		
-		replaceData(with: [
-			Photo(
-				id: 8945,
-				sol: 2540,
-				imgSrc: "https://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/02224/opgs/edr/fcam/FRA_594936755EDR_F0730550FHAZ00337M_.JPG",
-				earthDate: Calendar.current.date(from: DateComponents(year: 2019, month: 9, day: 28))!,
-				camera: Camera(
-					name: "FHAZ",
-					fullName: "Front Hazard Avoidance Camera"),
-				rover: Rover(
-					id: 5,
-					name: "Curiosity",
-					landingDate: Calendar.current.date(from: DateComponents(year: 2012, month: 8, day: 6))!,
-					launchDate: Calendar.current.date(from: DateComponents(year: 2011, month: 11, day: 26))!,
-					status: .active,
-					maxSol: 2540,
-					maxDate: Calendar.current.date(from: DateComponents(year: 2019, month: 9, day: 28))!,
-					totalPhotos: 366206,
-					cameras: [
-						Camera(
-							name: "FHAZ",
-							fullName: "Front Hazard Avoidance Camera"),
-						Camera(
-							name: "NAVCAM",
-							fullName: "Navigation Camera")
-				]))
-		])
+		guard let rover = rover else { return }
+		manager?.retrieveManifest(
+			for: rover,
+			success: { (manifest) in
+				self.dataSource = PhotoManifestDataSource(manifest: manifest)
+				self.refreshData(byAppending: false)
+			}, failure: { (error) in
+				print(error)
+		})
     }
+	
+	func refreshData(byAppending: Bool) {
+		guard let rover = rover else { return }
+		if byAppending {
+			manager?.retrievePhotos(
+				for: rover,
+				camera: camera,
+				page: dataSource.currentPage,
+				sol: dataSource.currentSol,
+				success: { (photos) in
+					self.appendData(with: photos)
+					self.dataSource.advance()
+				}, failure: { (error) in
+					self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+						self.refreshData(byAppending: byAppending)
+					})
+			})
+		} else {
+			manager?.retrievePhotos(
+				for: rover,
+				camera: camera,
+				page: dataSource.currentPage,
+				sol: dataSource.currentSol,
+				success: { (photos) in
+					self.replaceData(with: photos)
+					self.dataSource.advance()
+				}, failure: { (error) in
+					self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+						self.refreshData(byAppending: byAppending)
+					})
+			})
+		}
+	}
 	
 	func replaceData(with photos: [Photo]) {
 		rawData = photos
 		data = .init(photos: photos)
+		tableView.reloadData()
 	}
 	
 	func appendData(with photos: [Photo]) {
 		rawData.append(contentsOf: photos)
-		data.append(photos: photos)
+		let toInsert = data.append(photos: photos)
+		tableView.beginUpdates()
+		tableView.insertRows(at: toInsert.rowsInserted, with: .top)
+		tableView.insertSections(IndexSet(toInsert.sectionsInserted), with: .top)
+		tableView.endUpdates()
 	}
 
     // MARK: - UITableViewDataSource
@@ -73,8 +100,8 @@ class PhotosTableViewController: UITableViewController {
     }
 	
 	override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-		let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell", for: indexPath)
-		cell.textLabel?.text = data[indexPath.section].photos[indexPath.row].rover.name
+		let cell = tableView.dequeueReusableCell(withIdentifier: "photoCell", for: indexPath) as! PhotoTableViewCell
+		cell.photo = data[indexPath.section].photos[indexPath.row]
 		return cell
 	}
 	
