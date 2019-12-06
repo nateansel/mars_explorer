@@ -8,11 +8,18 @@
 
 import Foundation
 
+/// An object that contains a summary of a set of photos for a particular Sol.
 class PhotoSet: Decodable {
+	/// The Sol on which this photo set was taken.
 	let sol: Int
+	
+	/// The total number of photos in this set.
 	let totalPhotos: Int
+	
+	/// All the cameras that took photos on this sol.
 	let cameras: [String]
 	
+	/// The total number of pages of requests for this set.
 	let totalPages: Int
 
 	init(sol: Int, totalPhotos: Int, cameras: [String]) {

@@ -1,5 +1,5 @@
 //
-//  RoversCoordinator.swift
+//  AppCoordinator.swift
 //  Mars Explorer
 //
 //  Created by Nathan Ansel on 12/2/19.
@@ -8,26 +8,36 @@
 
 import UIKit
 
-class RoversCoordinator {
+/// An object that controls the flow through the application.
+///
+///
+class AppCoordinator {
+	/// The `UINavigationController` to use to display all the screens in the app. The root view controller of this
+	/// coordinator.
 	let navigationController: UINavigationController
 	
+	/// Basic initializer for this class. Must provide a `UINavigationController`.
+	///
+	/// - parameter navigationController: The `UINavigationController` that will be used in this object.
 	init(navigationController: UINavigationController) {
 		self.navigationController = navigationController
 		navigationController.navigationBar.prefersLargeTitles = true
-		navigationController.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 0)
 	}
 	
+	/// Starts the application interface. Starts the interface with the Rovers list screen.
+	///
+	/// This method must be called for any view controllers in this coordinator to be initialized and displayed.
 	func start() {
 		let vc = RoversTableViewController()
 		vc.delegate = self
-		vc.manager = RoverService()
+		vc.service = RoverService()
 		navigationController.pushViewController(vc, animated: false)
 	}
 }
 
 // MARK: - RoversTableViewControllerDelegate
 
-extension RoversCoordinator: RoversTableViewControllerDelegate {
+extension AppCoordinator: RoversTableViewControllerDelegate {
 	func display(rover: Rover) {
 		let vc = RoverDetailTableViewController()
 		vc.rover = rover
@@ -36,18 +46,22 @@ extension RoversCoordinator: RoversTableViewControllerDelegate {
 	}
 }
 
-extension RoversCoordinator: RoverDetailTableViewControllerDelegate {
+// MARK: - RoverDetailTableViewControllerDelegate
+
+extension AppCoordinator: RoverDetailTableViewControllerDelegate {
 	func displayPhotos(for rover: Rover, and camera: Camera?) {
 		let vc = PhotosTableViewController()
 		vc.delegate = self
-		vc.manager = PhotoService()
+		vc.service = PhotoService.shared
 		vc.rover = rover
 		vc.camera = camera
 		navigationController.pushViewController(vc, animated: true)
 	}
 }
 
-extension RoversCoordinator: PhotosTableViewControllerDelegate {
+// MARK: - PhotosTableViewControllerDelegate
+
+extension AppCoordinator: PhotosTableViewControllerDelegate {
 	func display(photo: Photo) {
 		let vc = PhotoDetailTableViewController()
 		vc.photo = photo

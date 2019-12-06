@@ -8,7 +8,9 @@
 
 import Foundation
 
+/// An object that contains a summary of a rover's photo manifest.
 class PhotoManifest: Decodable {
+	/// The list of photo sets, grouped and sorted by Sol.
 	let photoSets: [PhotoSet]
 	
 	init(photos: [PhotoSet]) {

@@ -11,14 +11,15 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 	var window: UIWindow?
-	let roverCoor = RoversCoordinator(navigationController: UINavigationController())
+	let appCoordinator = AppCoordinator(navigationController: UINavigationController())
 
 	func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
 		// Initalize the UIWindow and start the app
+		// NOTE: This method is not designed for multi-screen support. Will need to be modified to add that functionality.
 		guard let windowScene = (scene as? UIWindowScene) else { return }
 		window = UIWindow(windowScene: windowScene)
-		window?.rootViewController = roverCoor.navigationController
-		roverCoor.start()
+		window?.rootViewController = appCoordinator.navigationController
+		appCoordinator.start()
 		window?.makeKeyAndVisible()
 	}
 

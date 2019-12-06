@@ -8,11 +8,15 @@
 
 import UIKit
 
+/// A custom view used to display a rover's status.
 class StatusView: UIView {
 	
+	// MARK: - Properties
+	
+	/// The status to display.
 	var status: RoverStatus = .active
 	
-	// MARK: - Properties
+	// MARK: Views
 	
 	private let symbolLayer = CAShapeLayer()
 	
@@ -32,10 +36,10 @@ class StatusView: UIView {
 		super.draw(rect)
 		symbolLayer.frame = bounds
 		let frame = CGRect(
-			x: (bounds.width / 2) - 4,
-			y: (bounds.height / 2) - 4, // centers the frame
-			width: 8,
-			height: 8)
+			x: (bounds.width / 2) - 6,
+			y: (bounds.height / 2) - 6, // centers the frame
+			width: 12,
+			height: 12)
 		symbolLayer.path = UIBezierPath(ovalIn: frame).cgPath
 		
 		switch status {

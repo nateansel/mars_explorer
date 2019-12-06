@@ -14,27 +14,42 @@ protocol PhotosTableViewControllerDelegate: class {
 
 class PhotosTableViewController: UITableViewController {
 	
+	/// The rover this screen will be displaying photos for.
 	var rover: Rover?
+	
+	/// The optional camer this screen will be displaying photos for.
 	var camera: Camera?
 	
+	/// The delegate for this screen. Navigation flows are passed to this delegate.
 	var delegate: PhotosTableViewControllerDelegate?
-	var manager: PhotoService?
 	
-	private var rawData: [Photo] = []
+	/// The service object used by this screen to retrieve information from the API.
+	var service: PhotoService?
+	
+	/// The data displayed by this screen.
 	private var data: [PhotoGroup] = []
+	
+	/// The data source used to simplify service requests.
 	private var dataSource: PhotoManifestDataSource!
+	
+	/// If this screen is currently loading information from the api or not. Used to keep from duplicating network
+	/// requests.
 	private var isLoading = false
+	
+	/// Used to track how many photos have been retrieved in the current request. If the value is less than 25, another
+	/// request should be started.
+	private var currentRetrievedCount = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 		
 		title = "Photos"
-		tableView.register(UITableViewCell.self, forCellReuseIdentifier: "basicCell")
 		tableView.register(PhotoTableViewCell.self, forCellReuseIdentifier: "photoCell")
 		tableView.register(LoadingTableViewCell.self, forCellReuseIdentifier: "loadingCell")
 		
+		// Retrieve the manifest for this rover and start loading photos.
 		guard let rover = rover else { return }
-		manager?.retrieveManifest(
+		service?.retrieveManifest(
 			for: rover,
 			success: { (manifest) in
 				self.dataSource = PhotoManifestDataSource(manifest: manifest)
@@ -44,11 +59,16 @@ class PhotosTableViewController: UITableViewController {
 		})
     }
 	
+	/// Retrieves data from the API. Either appends the results to the end of `data` or replaces the contents of `data`
+	/// entirely.
+	///
+	/// - parameter byAppending: If the data should be appended to the end of `data`. If `false`, replaces the contents
+	///   of `data`.
 	func refreshData(byAppending: Bool) {
 		isLoading = true
 		guard let rover = rover else { return }
 		if byAppending {
-			manager?.retrievePhotos(
+			service?.retrievePhotos(
 				for: rover,
 				camera: camera,
 				page: dataSource.currentPage,
@@ -57,16 +77,19 @@ class PhotosTableViewController: UITableViewController {
 					self.appendData(with: photos)
 					self.dataSource.advance()
 					self.isLoading = false
-					if photos.count < 25 {
+					self.currentRetrievedCount += photos.count
+					if self.currentRetrievedCount < 25 {
 						self.refreshData(byAppending: true)
+					} else {
+						self.currentRetrievedCount = 0
 					}
 				}, failure: { (error) in
-					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of photos. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})
 			})
 		} else {
-			manager?.retrievePhotos(
+			service?.retrievePhotos(
 				for: rover,
 				camera: camera,
 				page: dataSource.currentPage,
@@ -75,28 +98,33 @@ class PhotosTableViewController: UITableViewController {
 					self.replaceData(with: photos)
 					self.dataSource.advance()
 					self.isLoading = false
-					if photos.count < 25 {
+					self.currentRetrievedCount += photos.count
+					if self.currentRetrievedCount < 25 {
 						self.refreshData(byAppending: true)
-					}
+					} else {
+					   self.currentRetrievedCount = 0
+				   }
 				}, failure: { (error) in
-					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of photos. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})
 			})
 		}
 	}
 	
+	/// Replaces the current set of displayed data with the provided data.
+	///
+	/// - parameter photos: The data to display on this screen. Replaces currently displayed data.
 	func replaceData(with photos: [Photo]) {
-		rawData = photos
 		data = .init(photos: photos)
 		tableView.reloadData()
 	}
 	
+	/// Appends the given data set to the current set of displayed data.
+	///
+	/// - parameter photos: The data to append to the data currently displayed on this screen.
 	func appendData(with photos: [Photo]) {
-		rawData.append(contentsOf: photos)
-		print(data)
 		let toInsert = data.append(photos: photos)
-		print(data)
 		tableView.beginUpdates()
 		tableView.insertRows(at: toInsert.rowsInserted, with: .top)
 		tableView.insertSections(IndexSet(toInsert.sectionsInserted), with: .top)
@@ -128,6 +156,12 @@ class PhotosTableViewController: UITableViewController {
 		let dateFormatter = DateFormatter()
 		dateFormatter.dateStyle = .short
 		return dateFormatter.string(from: data[section].date)
+	}
+	
+	// MARK: - UITableViewDelegate
+	
+	override func tableView(_ tableView: UITableView, shouldHighlightRowAt indexPath: IndexPath) -> Bool {
+		return indexPath.section != data.count
 	}
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

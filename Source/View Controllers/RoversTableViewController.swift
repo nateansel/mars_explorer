@@ -12,16 +12,16 @@ protocol RoversTableViewControllerDelegate: class {
 	func display(rover: Rover)
 }
 
-protocol RoversManager: class {
-	func retrieveRovers(success: @escaping ([Rover]) -> Void, failure: @escaping (Error) -> Void)
-}
-
 class RoversTableViewController: UITableViewController {
 	
+	/// The data to be displayed in this screen.
 	var data: [Rover] = []
 	
+	/// The delegate for this screen. Navigation flows are passed to this delegate.
 	var delegate: RoversTableViewControllerDelegate?
-	var manager: RoversManager?
+	
+	/// The service object used by this screen to retrieve information from the API.
+	var service: RoverService?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,11 +32,11 @@ class RoversTableViewController: UITableViewController {
     }
 	
 	func refreshData() {
-		manager?.retrieveRovers(success: { (rovers) in
+		service?.retrieveRovers(success: { (rovers) in
 			self.data = rovers
 			self.tableView.reloadData()
 		}, failure: { (error) in
-			self.presentRetryAlert(title: "Internet Problem", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
+			self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of Mars rovers. Please try again.", retryAction: {
 				self.refreshData()
 			})
 			print(error)

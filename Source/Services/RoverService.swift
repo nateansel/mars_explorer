@@ -9,10 +9,12 @@
 import Foundation
 
 fileprivate extension URL {
+	/// The `URL` for retrieving a list of rovers.
 	static let roverList = base.appendingPathComponent("rovers")
 }
 
-class RoverService: RoversManager {
+/// An object to contains all of the networking requests needed to retrieve rovers from the API.
+class RoverService {
 	
 	private let session = URLSession(configuration: .default)
 	private let decoder: JSONDecoder = {
@@ -24,11 +26,21 @@ class RoverService: RoversManager {
 		return $0
 	}(JSONDecoder())
 	
+	
+	/// A simple struct used to decode the value retrieved from the API that contains a list of rovers.
 	private struct RoversResult: Decodable {
 		let rovers: [Rover]
 	}
 	
-	func retrieveRovers(success: @escaping ([Rover]) -> Void, failure: @escaping (Error) -> Void) {
+	
+	/// Retrieves a list of rovers.
+	///
+	/// - parameters:
+	///   - success: A block to run if the API request is successful. Will contain a list of `Rover`s.
+	///   - rovers: The list of `Rover`s retrieved from the API.
+	///   - failure: A block to run if the API request fails. Will contain an `Error`.
+	///   - error: The error encountered when the network request fails.
+	func retrieveRovers(success: @escaping (_ rovers: [Rover]) -> Void, failure: @escaping (_ error: Error) -> Void) {
 		do {
 			let url = try ServiceHelpers.secure(url: .roverList)
 			

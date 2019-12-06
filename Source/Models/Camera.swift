@@ -8,8 +8,12 @@
 
 import Foundation
 
+/// An object that contains a summary of a camera.
 class Camera: Decodable {
+	/// The abbreviated name of this camera. Usually only a few characters long.
 	let name: String
+	
+	/// The human readable name of this camera.
 	let fullName: String
 	
 	init(name: String, fullName: String) {

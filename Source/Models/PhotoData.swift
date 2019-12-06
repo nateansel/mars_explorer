@@ -8,8 +8,12 @@
 
 import Foundation
 
+/// An object that contains the image data for a `Photo`.
 class PhotoData {
+	/// The id of the `Photo` this data is associated with.
 	var photoID: Int
+	
+	/// The raw image data for a `Photo`.
 	var data: Data
 	
 	init(photoID: Int, data: Data) {

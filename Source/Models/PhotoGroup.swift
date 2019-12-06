@@ -8,8 +8,13 @@
 
 import Foundation
 
+/// An object used to organize photos by earth date. This object is used exclusively in the Photos list screen to
+/// simplify displaying sections of photos.
 class PhotoGroup {
+	/// The date on which these photos were taken.
 	let date: Date
+	
+	/// The photos included in this group.
 	var photos: [Photo]
 	
 	init(date: Date, photos: [Photo]) {
@@ -18,7 +23,13 @@ class PhotoGroup {
 	}
 }
 
+// MARK: - Array init & appending
+
 extension Array where Element: PhotoGroup {
+	/// Initialize an array of `PhotoGroup` objects with a list of `Photo` objects. This method will automatically sort
+	/// and group the photos by date.
+	///
+	/// - parameter photos: The list of photos to use to initialize an array of `PhotoGroup` objects.
 	init(photos: [Photo]) {
 		self.init()
 		guard !photos.isEmpty else { return }
@@ -39,6 +50,13 @@ extension Array where Element: PhotoGroup {
 		append(PhotoGroup(date: currentEarthDate, photos: currentPhotos) as! Element)
 	}
 	
+	/// Append `PhotoGroup` objects to this array with a given list of `Photo` objects. This method will automatically
+	/// sort and group the photos by date.
+	///
+	/// - parameter photos: The list of photos to append to this array.
+	/// - returns: The rows and sections that have been inserted into this array. Rows will be the indices for rows
+	///   appended to the last element in this array. Sections will be the indicies for additional `PhotoGroup` objects
+	///   that have been appended.
 	@discardableResult
 	mutating func append(photos: [Photo]) -> (rowsInserted: [IndexPath], sectionsInserted: [Int]) {
 		var rows: [Int] = []
