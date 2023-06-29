@@ -51,4 +51,14 @@ class PhotoTests: XCTestCase {
 				""")
 		}
 	}
+
+	func testNewPhotoDecodable() throws {
+		jsonData = dataFromJson(for: "photo_sample_2")
+		let photo = try decoder.decode(Photo.self, from: jsonData)
+		XCTAssertEqual(photo.id, 1154316)
+		XCTAssertEqual(photo.sol, 3872)
+		XCTAssertEqual(photo.rover.id, 5)
+		XCTAssertEqual(photo.rover.name, "Curiosity")
+		XCTAssertNil(photo.rover.maxSol)
+	}
 }

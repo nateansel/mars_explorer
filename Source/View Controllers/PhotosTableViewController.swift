@@ -88,6 +88,7 @@ class PhotosTableViewController: UITableViewController {
 						self.currentRetrievedCount = 0
 					}
 				}, failure: { (error) in
+					print(error)
 					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of photos. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})
@@ -109,6 +110,7 @@ class PhotosTableViewController: UITableViewController {
 					   self.currentRetrievedCount = 0
 				   }
 				}, failure: { (error) in
+					print(error)
 					self.presentRetryAlert(title: "Internet Issue", message: "There was a problem downloading the list of photos. Please try again.", retryAction: {
 						self.refreshData(byAppending: byAppending)
 					})

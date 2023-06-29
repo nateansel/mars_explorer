@@ -35,16 +35,16 @@ class Rover: Decodable {
 	let status: RoverStatus
 	
 	/// The last Sol this rover has photos for.
-	let maxSol: Int
+	let maxSol: Int?
 	
 	/// The last date this rover has photos for.
-	let maxDate: Date
+	let maxDate: Date?
 	
 	/// The total number of photos this rover has taken on Mars.
-	let totalPhotos: Int
+	let totalPhotos: Int?
 	
 	/// All the cameras on this rover.
-	let cameras: [Camera]
+	let cameras: [Camera]?
 	
 	init(id: Int, name: String, landingDate: Date, launchDate: Date, status: RoverStatus, maxSol: Int, maxDate: Date, totalPhotos: Int, cameras: [Camera]) {
 		self.id = id

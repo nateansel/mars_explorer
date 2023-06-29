@@ -24,6 +24,7 @@
 		D840943323971409000027C1 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D840943223971409000027C1 /* UIViewController+Extensions.swift */; };
 		D8409435239731FC000027C1 /* PhotoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409434239731FC000027C1 /* PhotoService.swift */; };
 		D8409437239735DA000027C1 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8409436239735DA000027C1 /* Photo.swift */; };
+		D88C5D332A4DE198005AE447 /* photo_sample_2.json in Resources */ = {isa = PBXBuildFile; fileRef = D88C5D322A4DE198005AE447 /* photo_sample_2.json */; };
 		D88FE0A92395B265000C42B2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0A82395B265000C42B2 /* AppDelegate.swift */; };
 		D88FE0AB2395B265000C42B2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */; };
 		D88FE0B22395B267000C42B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D88FE0B12395B267000C42B2 /* Assets.xcassets */; };
@@ -83,6 +84,7 @@
 		D840943223971409000027C1 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		D8409434239731FC000027C1 /* PhotoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoService.swift; sourceTree = "<group>"; };
 		D8409436239735DA000027C1 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		D88C5D322A4DE198005AE447 /* photo_sample_2.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = photo_sample_2.json; sourceTree = "<group>"; };
 		D88FE0A52395B265000C42B2 /* Mars Explorer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mars Explorer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D88FE0A82395B265000C42B2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D88FE0AA2395B265000C42B2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				D88FE1352395B99C000C42B2 /* manifest_sample.json */,
 				0E79047B239AAFEC0086A0AF /* photo_set_sample.json */,
 				0E204FA8239AFFC5008D1884 /* photo_sample.json */,
+				D88C5D322A4DE198005AE447 /* photo_sample_2.json */,
 				D88FE1342395B99B000C42B2 /* photos_sample.json */,
 				D88FE1362395B99C000C42B2 /* rovers_sample.json */,
 			);
@@ -387,6 +390,7 @@
 			files = (
 				D88FE1392395B99C000C42B2 /* rovers_sample.json in Resources */,
 				0E204FA9239AFFC5008D1884 /* photo_sample.json in Resources */,
+				D88C5D332A4DE198005AE447 /* photo_sample_2.json in Resources */,
 				D88FE1382395B99C000C42B2 /* manifest_sample.json in Resources */,
 				D88FE1242395B7C3000C42B2 /* rover_sample.json in Resources */,
 				D88FE1232395B7C3000C42B2 /* camera_sample.json in Resources */,

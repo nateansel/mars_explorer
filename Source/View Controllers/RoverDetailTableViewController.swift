@@ -67,7 +67,7 @@ class RoverDetailTableViewController: UITableViewController {
 		case 0:
 			return 3
 		case 1:
-			return isDisplayingCameras ? (rover?.cameras.count ?? 0) + 1 : 1
+			return isDisplayingCameras ? (rover?.cameras?.count ?? 0) + 1 : 1
 		case 2:
 			return 1
 		default:
@@ -105,7 +105,7 @@ class RoverDetailTableViewController: UITableViewController {
 				return cell
 			}
 			let cell = tableView.dequeueReusableCell(withIdentifier: "cameraCell", for: indexPath) as! CameraTableViewCell
-			cell.camera = rover?.cameras[indexPath.row - 1]
+			cell.camera = rover?.cameras?[indexPath.row - 1]
 			cell.accessoryType = .disclosureIndicator
 			return cell
 		case 2:
@@ -138,7 +138,7 @@ class RoverDetailTableViewController: UITableViewController {
 	
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 		// Make sure we have a rover
-		guard let rover = rover else {
+		guard let rover = rover, let cameras = rover.cameras else {
 			tableView.deselectRow(at: indexPath, animated: true)
 			return
 		}
@@ -148,7 +148,7 @@ class RoverDetailTableViewController: UITableViewController {
 				// Deselect the camera toggle row
 				tableView.deselectRow(at: indexPath, animated: true)
 				isDisplayingCameras.toggle()
-				let indexPaths = rover.cameras.indices.map({ IndexPath(row: $0 + 1, section: 1) })
+				let indexPaths = cameras.indices.map({ IndexPath(row: $0 + 1, section: 1) })
 				if isDisplayingCameras {
 					tableView.cellForRow(at: indexPath)?.textLabel?.text = "Hide All Cameras"
 					tableView.insertRows(at: indexPaths, with: .top)
@@ -158,7 +158,7 @@ class RoverDetailTableViewController: UITableViewController {
 				}
 				return
 			}
-			delegate?.displayPhotos(for: rover, and: rover.cameras[indexPath.row - 1])
+			delegate?.displayPhotos(for: rover, and: cameras[indexPath.row - 1])
 		case 2:
 			delegate?.displayPhotos(for: rover, and: nil)
 		default: break

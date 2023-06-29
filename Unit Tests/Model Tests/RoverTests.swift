@@ -49,7 +49,7 @@ class RoverTests: XCTestCase {
 			XCTAssert(rover.maxSol == roverMaxSol, "The Rover.maxSol property was not decoded properly. \(roverMaxSol) is the correct value, but the value decoded from the JSON was: \(rover.maxSol)")
 			XCTAssert(rover.maxDate == roverMaxDate, "The Rover.maxDate property was not decoded properly. \(roverMaxDate) is the correct value, but the value decoded from the JSON was: \(rover.maxDate)")
 			XCTAssert(rover.totalPhotos == roverTotalPhotos, "The Rover.totalPhotos property was not decoded properly. \(roverTotalPhotos) is the correct value, but the value decoded from the JSON was: \(rover.totalPhotos)")
-			XCTAssert(rover.cameras.first?.name == roverCamera1Name, "The Rover.cameras property was not decoded properly. \(roverCamera1Name) is the correct value for the first Camera's name, but the value decoded from the JSON was: \(rover.cameras.first?.name as Any)")
+			XCTAssert(rover.cameras?.first?.name == roverCamera1Name, "The Rover.cameras property was not decoded properly. \(roverCamera1Name) is the correct value for the first Camera's name, but the value decoded from the JSON was: \(rover.cameras?.first?.name as Any)")
 		} catch {
 			XCTFail("""
 				\(fileName).json was unable to be parsed by the initializer provided by conforming to the Decodable protocol. Check your implementation before continuing.
